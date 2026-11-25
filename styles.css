@@ -859,7 +859,7 @@ b,strong{font-weight:700}
 .testimonial-grid{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:start}
 .testimonial-grid::before{content:"";position:absolute;right:-20px;bottom:-36px;width:40%;height:56%;background:var(--st-sage);border-radius:28px;z-index:0}
 .story-card{position:relative;margin:0;display:flex;flex-direction:column;border-radius:22px}
-.story-card--featured{grid-column:1 / span 8;grid-row:1;z-index:1;min-height:392px;padding:52px 216px 36px 48px;background:var(--st-forest);color:#fff;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 44px rgba(18,63,38,.18)}
+.story-card--featured{grid-column:1 / span 8;grid-row:1;z-index:1;min-height:392px;padding:52px 216px 36px 48px;background:#27372d;color:#fff;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 44px rgba(28,40,32,.18)}
 .story-card--light{grid-column:7 / span 6;grid-row:1;z-index:2;margin-top:152px;padding:36px 36px 28px;background:#fff;border:1px solid var(--st-line);box-shadow:0 18px 40px rgba(26,29,27,.10)}
 .cs-hl{background:none;font-weight:600}
 .story-card--featured .cs-hl{color:var(--st-sage)}
@@ -1259,3 +1259,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 /* ---- Customer stories: centred heading block ---- */
 .stories__head{max-width:none;text-align:center}
 .stories__eyebrow,.stories__title{text-align:center}
+
+/* engaged employees: slightly more breathing room between title, list and tagline */
+.ee-caps{margin-top:52px}
+.ee-sub{margin-top:56px}
+@media (max-width:1024px){.ee-caps{margin-top:46px}.ee-sub{margin-top:48px}}
+
+/* journey: equal-length dashed connectors regardless of label width */
+.track{gap:0}
+.step-col{width:auto;flex:1 1 auto}
+.step-col:last-child{flex:none}
+.step-col:not(:last-child)::after{margin:0 12px 0 12px}
