@@ -769,17 +769,17 @@ b,strong{font-weight:700}
 .pcta__sub{max-width:600px;margin:16px auto 28px;font-size:20px;line-height:1.6}
 .pcta__view{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#14532d;font-size:16px;font-weight:700;letter-spacing:.02em;padding:18px 32px;border-radius:6px;transition:box-shadow .18s ease-out,transform .18s ease-out}
 .pcta__view:hover{box-shadow:0 10px 24px rgba(0,0,0,.25);transform:translateY(-1px)}
-.pcta__cards{display:flex;gap:36px;justify-content:center;margin:-70px auto 0;padding:0 24px;max-width:1440px;position:relative}
-.pcta__card{flex:1;max-width:700px;background:#fff;border-radius:16px;padding:36px 44px 40px;box-shadow:0 12px 36px rgba(0,0,0,.10)}
-.pcta__ic{width:70px;height:70px;border-radius:14px;background:#f1f1f1;display:flex;align-items:center;justify-content:center;margin-bottom:34px}
+.pcta__cards{display:flex;gap:28px;justify-content:center;margin:-70px auto 0;padding:0 24px;max-width:1440px;position:relative}
+.pcta__card{flex:1;max-width:560px;background:#fff;border-radius:16px;padding:28px 32px 30px;box-shadow:0 12px 36px rgba(0,0,0,.10)}
+.pcta__ic{width:56px;height:56px;border-radius:14px;background:#f1f1f1;display:flex;align-items:center;justify-content:center;margin-bottom:22px}
 .pcta__ic svg{display:block}
-.pcta__card h3{font-size:32px;line-height:1.2;font-weight:700;color:#000;margin-bottom:12px}
-.pcta__card p{font-size:20px;line-height:1.5;color:#404040;margin-bottom:26px}
-.pcta__btn{display:inline-flex;align-items:center;justify-content:center;border:2px solid #000;border-radius:6px;color:#000;background:#fff;font-size:16px;font-weight:700;letter-spacing:.02em;padding:16px 32px;transition:background-color .18s ease-out,color .18s ease-out}
+.pcta__card h3{font-size:26px;line-height:1.2;font-weight:700;color:#000;margin-bottom:8px}
+.pcta__card p{font-size:17px;line-height:1.5;color:#404040;margin-bottom:20px}
+.pcta__btn{display:inline-flex;align-items:center;justify-content:center;border:2px solid #000;border-radius:6px;color:#000;background:#fff;font-size:14px;font-weight:700;letter-spacing:.02em;padding:12px 26px;transition:background-color .18s ease-out,color .18s ease-out}
 .pcta__btn:hover{background:#000;color:#fff}
 @media (max-width:1024px){
   .pcta__title{font-size:42px}.pcta__band{padding:64px 24px 110px}
-  .pcta__card{padding:32px 28px 36px}.pcta__card h3{font-size:26px}.pcta__card p{font-size:17px}
+  .pcta__card{padding:32px 28px 36px}.pcta__card h3{font-size:22px}.pcta__card p{font-size:15px}
 }
 @media (max-width:720px){
   .pcta__title{font-size:34px}.pcta__sub{font-size:17px}
