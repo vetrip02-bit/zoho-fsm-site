@@ -1237,3 +1237,25 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 /* ---- hero CTA: hug the label, no extra side space ---- */
 .hero__cta{min-width:0;width:auto;padding:0 22px}
 @media (max-width:720px){.hero__cta{padding:0 20px}}
+
+/* ---- Customer stories: sentence-case label, more compact section ---- */
+.stories__eyebrow{text-transform:none;letter-spacing:0;font-size:1rem;margin-bottom:10px}
+@media (min-width:1025px){
+  .stories{padding-top:48px;padding-bottom:48px}
+  .stories__head{margin-bottom:28px}
+  .stories__title{font-size:clamp(2rem,3.4vw,2.75rem)}
+  .story-card--featured{min-height:316px;padding:40px 200px 28px 40px}
+  .story-card--light{margin-top:112px;padding:28px 30px 22px}
+  .story-card--featured .story-card__quote p{font-size:clamp(1.25rem,1.8vw,1.6rem)}
+  .story-card--light .story-card__quote p{font-size:clamp(1rem,1.3vw,1.15rem)}
+  .story-card__quote{margin-bottom:20px}
+  .cs-deco{width:120px;top:20px;right:24px}
+}
+
+/* ---- equal spacing: Efficient Operations -> Engaged Employees == Engaged Employees -> Delighted Customers (72px + 72px = 144px) ---- */
+.engaged{padding-bottom:72px}
+.delighted{padding-top:72px}
+
+/* ---- Customer stories: centred heading block ---- */
+.stories__head{max-width:none;text-align:center}
+.stories__eyebrow,.stories__title{text-align:center}
