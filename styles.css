@@ -1171,3 +1171,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 @media (min-width:821px){
   .ee-badges{justify-content:center;margin-left:0;transform:translateX(119px)}
 }
+
+/* ---- Engaged Employees: visual pushed to the right edge of its column ---- */
+@media (min-width:721px){ .ee-fit{justify-content:flex-end} }
+@media (min-width:821px){ .ee-badges{justify-content:flex-end;margin-left:0;margin-right:22px;transform:none} }
