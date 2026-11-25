@@ -1,6 +1,6 @@
 // Fit the 1440px-wide design to the window width (no empty side margins on wide screens).
 // The carousel stage is authored at 724x606; scale it to the width its column gives it.
-// Engaged Employees product visual is authored at 740x600; scale it to its column (swipe row on mobile).
+// Engaged Employees product visual is authored at 548x600; scale it to its column (swipe row on mobile).
 function fitEngaged() {
   var fit = document.querySelector('.ee-fit'), st = fit && fit.querySelector('.ee-stage');
   if (!st) return;
@@ -11,7 +11,7 @@ function fitEngaged() {
     return;
   }
   delete fit.dataset.centered;
-  var s = Math.min(1, fit.offsetWidth / 740);
+  var s = Math.min(1, fit.offsetWidth / 548);
   st.style.setProperty('--ee-s', String(s));
   fit.style.height = Math.round(600 * s) + 'px';
 }

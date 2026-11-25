@@ -1162,3 +1162,12 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 @media (max-width:720px){.ee-cap__desc{font-size:14px}}
 .ee-cap__text{gap:6px}.ee-cap__desc{white-space:nowrap}
 @media (max-width:720px){.ee-cap__desc{white-space:normal}}
+
+/* ---- Engaged Employees: single-phone layout (second phone removed) ---- */
+.ee-stage{width:548px}
+@media (min-width:721px){
+  .ee-fit{display:flex;justify-content:center}
+}
+@media (min-width:821px){
+  .ee-badges{justify-content:center;margin-left:0;transform:translateX(119px)}
+}
