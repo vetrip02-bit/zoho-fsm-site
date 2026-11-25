@@ -1175,3 +1175,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 /* ---- Engaged Employees: visual pushed to the right edge of its column ---- */
 @media (min-width:721px){ .ee-fit{justify-content:flex-end} }
 @media (min-width:821px){ .ee-badges{justify-content:flex-end;margin-left:0;margin-right:22px;transform:none} }
+
+/* ---- Engaged Employees: curved arrow from map to phone ---- */
+.ee-arrow{position:absolute;left:0;top:0;width:548px;height:600px;z-index:3;pointer-events:none;overflow:visible}
+@media (max-width:720px){.ee-arrow{display:none}}
