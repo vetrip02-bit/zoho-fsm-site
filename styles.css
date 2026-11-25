@@ -1314,3 +1314,35 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .chip{height:34px;gap:7px;padding:5px 12px 5px 5px;font-size:11.5px;line-height:14px;bottom:12px;left:12px}
 .chip img{width:22px;height:22px}
 .chip small{font-size:10.5px}
+
+/* ---- Engaged Employees: new layout — subtitle under title, Effective Servicing type sizes, phone centred over the store badges ---- */
+.engaged .ee-card{background:
+  radial-gradient(circle at 72% 40%,rgba(214,236,214,.55) 0%,rgba(214,236,214,.18) 36%,transparent 62%),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='700' viewBox='0 0 900 700' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M380 0c60 80 120 120 220 150s170 90 300 70M520 0l140 230 180 300M300 700c120-60 240-120 380-110s160-40 220-90M640 250c-40 120-110 190-230 250'/%3E%3Cpath d='M240 440c160-30 300-80 420-60 100 16 170-10 240-60' stroke='%23f5deb0' stroke-width='5'/%3E%3C/svg%3E") right center/cover no-repeat,
+  #fbf9f5}
+.engaged .ee-title{margin-bottom:0}
+.engaged .ee-sub{margin-top:16px;padding-bottom:0;font-size:20px;line-height:28px;font-weight:400;color:#2f4f73}
+.engaged .ee-caps{margin-top:36px;gap:28px}
+.engaged .ee-cap{grid-template-columns:40px 1fr;column-gap:22px;align-items:start}
+.engaged .ee-tile{width:40px;height:40px;border-radius:6px}
+.engaged .ee-tile img,.engaged .ee-tile svg{width:22px;height:22px}
+.engaged .ee-cap__text{gap:3px}
+.engaged .ee-cap__label{font-size:20px;line-height:26px;font-weight:700;letter-spacing:-.2px}
+.engaged .ee-cap__desc{font-size:16px;line-height:23px;color:#2f4f73;white-space:normal}
+.ee-phone--main{left:134px}
+.ee-badges{justify-content:center;margin-left:0;margin-right:0;transform:none}
+@media (min-width:721px){.ee-phone--main{left:134px}.ee-fit{justify-content:center}}
+@media (min-width:821px){.ee-badges{justify-content:center;margin-left:0;margin-right:0;transform:none}}
+@media (max-width:1024px){
+  .engaged .ee-cap__label{font-size:17px;line-height:23px}
+  .engaged .ee-cap__desc{font-size:14px;line-height:21px}
+  .engaged .ee-sub{font-size:17px;line-height:24px}
+  .engaged .ee-tile{width:36px;height:36px}.engaged .ee-cap{grid-template-columns:36px 1fr;column-gap:16px}
+}
+@media (max-width:720px){
+  .engaged .ee-cap__label{font-size:18px;line-height:24px}
+  .engaged .ee-cap__desc{font-size:15px;line-height:22px}
+}
+/* phone sits exactly over the badges: scale the stage from its centre, not its right edge */
+@media (min-width:721px){.ee-stage{transform-origin:50% 0}}
+@media (min-width:1025px){.engaged .ee-cap__desc{white-space:nowrap}}
