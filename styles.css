@@ -1156,3 +1156,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 /* ---- Effective Servicing: icon top edge = top of title text (all breakpoints) ---- */
 .effective .feature p{margin-top:0;padding-top:0}
 .effective .feature b{line-height:1;margin-top:-.16em;margin-bottom:6px}
+
+.ee-cap__text{display:flex;flex-direction:column;gap:4px}
+.ee-cap__desc{font-size:15px;line-height:1.4;font-weight:400;color:#5f594f}
+@media (max-width:720px){.ee-cap__desc{font-size:14px}}
