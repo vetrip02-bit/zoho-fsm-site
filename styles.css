@@ -169,7 +169,7 @@ b,strong{font-weight:700}
 .logo-strip:hover .logo-track{animation-play-state:paused}
 
 /* ---------- why ---------- */
-.why{text-align:center;padding:81px 0 50px;display:flex;flex-direction:column;align-items:center}
+.why{text-align:center;padding:81px 0 0;display:flex;flex-direction:column;align-items:center}
 .why p{width:570px}
 
 /* ---------- feature items (component "Feature item") ---------- */
@@ -199,7 +199,7 @@ b,strong{font-weight:700}
 .on-light-dots .dot-hit.active .dot{background:#1a1f2b;border-color:#1a1f2b}
 
 /* ---------- effective servicing ---------- */
-.effective{background:var(--white);padding:72px 64px;font-family:'Zoho Puvi','Instrument Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.effective{background:var(--white);padding:36px 64px 72px;font-family:'Zoho Puvi','Instrument Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
 .effective .panel{--head-h:145px;--head-gap:48px;max-width:1440px;margin:0 auto;border-radius:20px;color:var(--white);padding:68px;
   background:radial-gradient(circle at 16% 12%,rgba(255,255,255,.08) 0%,rgba(255,255,255,.03) 28%,transparent 48%),linear-gradient(135deg,#014a24 0%,#00923f 60%,#00c853 100%);
   box-shadow:0 20px 60px rgba(0,146,63,.20)}
