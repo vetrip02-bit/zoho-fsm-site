@@ -1291,3 +1291,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .chip{height:40px;gap:8px;padding:6px 14px 6px 6px;font-size:12.5px;line-height:16px;bottom:14px;left:14px}
 .chip img{width:24px;height:24px}
 .chip small{font-size:11.5px}
+
+/* pricing CTA: finer, more minimal dot pattern */
+.pcta__band{background:radial-gradient(circle,rgba(255,255,255,.2) 0 1.1px,transparent 1.6px) 0 0/22px 22px,linear-gradient(135deg,#014a24 0%,#00923f 60%,#00c853 100%)}
