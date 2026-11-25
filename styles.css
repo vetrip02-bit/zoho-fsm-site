@@ -1284,3 +1284,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 /* pricing CTA: demo/webinar cards removed, so the band no longer needs the overlap room */
 .pcta{padding-bottom:0}
 .pcta__band{padding-bottom:56px}
+
+/* pricing CTA: dotted pattern backdrop, content centred in the band */
+.pcta__band{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:64px 24px;
+  background:radial-gradient(circle,rgba(255,255,255,.24) 0 4px,transparent 4.5px) 0 0/54px 54px,linear-gradient(135deg,#014a24 0%,#00923f 60%,#00c853 100%)}
+.pcta__sub{margin:10px auto 22px;text-align:center}
