@@ -28,4 +28,9 @@
 <path d="M1495 392C1570 372 1620 350 1672 330"/>
 </g>
 </g>
+<g transform="translate(1052 205)">
+<ellipse cx="18" cy="76" rx="13" ry="4.5" fill="#1f4d2b" opacity=".18"/>
+<path d="M18 0C8 0 0 8 0 18c0 13 18 56 18 56s18-43 18-56C36 8 28 0 18 0z" fill="#1f7a37"/>
+<circle cx="18" cy="18" r="7" fill="#fff"/>
+</g>
 </svg>
