@@ -1309,3 +1309,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .pcta__band::before{
   -webkit-mask-image:linear-gradient(90deg,#000 calc(50% - 760px),rgba(0,0,0,.55) calc(50% - 560px),rgba(0,0,0,.2) calc(50% - 440px),transparent calc(50% - 340px),transparent calc(50% + 340px),rgba(0,0,0,.2) calc(50% + 440px),rgba(0,0,0,.55) calc(50% + 560px),#000 calc(50% + 760px));
   mask-image:linear-gradient(90deg,#000 calc(50% - 760px),rgba(0,0,0,.55) calc(50% - 560px),rgba(0,0,0,.2) calc(50% - 440px),transparent calc(50% - 340px),transparent calc(50% + 340px),rgba(0,0,0,.2) calc(50% + 440px),rgba(0,0,0,.55) calc(50% + 560px),#000 calc(50% + 760px))}
+
+/* journey photo chips: smaller still */
+.chip{height:34px;gap:7px;padding:5px 12px 5px 5px;font-size:11.5px;line-height:14px;bottom:12px;left:12px}
+.chip img{width:22px;height:22px}
+.chip small{font-size:10.5px}
