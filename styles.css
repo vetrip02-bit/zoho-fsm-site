@@ -1294,3 +1294,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 
 /* pricing CTA: finer, more minimal dot pattern */
 .pcta__band{background:radial-gradient(circle,rgba(255,255,255,.2) 0 1.1px,transparent 1.6px) 0 0/22px 22px,linear-gradient(135deg,#014a24 0%,#00923f 60%,#00c853 100%)}
+
+/* pricing CTA: fewer dots, shown only in the empty space either side of the text */
+.pcta__band{background:linear-gradient(135deg,#014a24 0%,#00923f 60%,#00c853 100%)}
+.pcta__band::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle,rgba(255,255,255,.22) 0 1.2px,transparent 1.7px) 0 0/38px 38px;
+  -webkit-mask-image:linear-gradient(90deg,#000 calc(50% - 400px),transparent calc(50% - 330px),transparent calc(50% + 330px),#000 calc(50% + 400px));
+  mask-image:linear-gradient(90deg,#000 calc(50% - 400px),transparent calc(50% - 330px),transparent calc(50% + 330px),#000 calc(50% + 400px))}
