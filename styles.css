@@ -116,7 +116,7 @@ b,strong{font-weight:700}
 .appt--green{--c:#089949;--bg:#e5f5ec}
 .appt--blue{--c:#2f7df4;--bg:#e4eefd}
 .appt--purple{--c:#8a5cf0;--bg:#ede7fc}
-.techs{padding:20px 18px;border-left:1px solid var(--line)}
+.techs{padding:20px 18px 0;border-left:1px solid var(--line);display:flex;flex-direction:column;overflow:visible}
 .techs h3{font-size:15px;font-weight:600;margin-bottom:18px}
 .techs ul{list-style:none;display:flex;flex-direction:column;gap:20px}
 .tech-row{display:flex;align-items:center;gap:12px}
@@ -1193,3 +1193,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 /* ---- Engaged Employees: curved arrow from map to phone ---- */
 .ee-arrow{position:absolute;left:0;top:0;width:548px;height:600px;z-index:3;pointer-events:none;overflow:visible}
 @media (max-width:720px){.ee-arrow{display:none}}
+
+/* technician cutout sits under the technician list */
+.tech-person{position:relative;margin-top:auto;padding-top:24px}
+.tech-person img{display:block;width:100%;height:auto}
+.tech-person__pill{position:absolute;left:0;bottom:30%;transform:translateX(-62%);display:flex;align-items:center;gap:6px;margin:0;padding:7px 12px 7px 9px;border-radius:999px;background:#fff;border:1px solid var(--line);box-shadow:0 6px 18px rgba(16,24,20,.1);font-size:12px;font-weight:500;white-space:nowrap}
+.tech-person__pill svg{width:16px;height:16px;fill:none;stroke:var(--hero-green);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
