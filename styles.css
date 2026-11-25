@@ -1346,3 +1346,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 /* phone sits exactly over the badges: scale the stage from its centre, not its right edge */
 @media (min-width:721px){.ee-stage{transform-origin:50% 0}}
 @media (min-width:1025px){.engaged .ee-cap__desc{white-space:nowrap}}
+
+/* ---- Engaged Employees: map background from the new design (sizes unchanged) ---- */
+.engaged .ee-card{background:url(assets/engaged-bg.svg) center/cover no-repeat,#fbf8f3}
