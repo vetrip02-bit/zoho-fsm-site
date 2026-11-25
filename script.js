@@ -60,6 +60,15 @@ document.querySelectorAll('[data-carousel]').forEach(function (root) {
   if (prev) prev.addEventListener('click', function () { go(i - 1); });
   if (next) next.addEventListener('click', function () { go(i + 1); });
   go(0);
+  // Auto-advance every 2 seconds; pauses while hovered/focused, and restarts after any manual change.
+  var timer = null, paused = false;
+  function start() { clearInterval(timer); timer = setInterval(function () { if (!paused && !document.hidden) go(i + 1); }, 2000); }
+  root.addEventListener('mouseenter', function () { paused = true; });
+  root.addEventListener('mouseleave', function () { paused = false; start(); });
+  root.addEventListener('focusin', function () { paused = true; });
+  root.addEventListener('focusout', function () { paused = false; start(); });
+  root.addEventListener('click', start);
+  start();
 });
 
 // Scroll-driven bits, recalculated on every scroll and resize.

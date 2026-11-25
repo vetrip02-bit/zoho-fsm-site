@@ -1199,3 +1199,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .tech-person img{display:block;width:70%;height:auto;margin:0 auto}
 .tech-person__pill{position:absolute;left:15%;bottom:15%;transform:translateX(-100%);z-index:2;display:flex;align-items:center;gap:6px;margin:0;padding:7px 12px 7px 9px;border-radius:999px;background:#fff;border:1px solid var(--line);box-shadow:0 6px 18px rgba(16,24,20,.1);font-size:12px;font-weight:500;white-space:nowrap}
 .tech-person__pill svg{width:16px;height:16px;fill:none;stroke:var(--hero-green);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---- Engaged Employees: slimmer phone (realistic ~0.47 aspect), right edge stays at 548 ---- */
+@media (min-width:721px){
+  .ee-phone--main{left:268px;width:280px}
+  .ee-welcome{padding:20px 16px 4px}
+  .ee-today{margin-inline:16px}
+  .ee-appts{padding:0 16px}
+  .ee-tech{width:90px}
+  .ee-appt__meta{font-size:13px;gap:8px}
+  .ee-appt__meta span:first-child{white-space:nowrap}
+}
