@@ -209,6 +209,16 @@
     group.forEach(function (b) { b.addEventListener('click', function () { go(Number(b.dataset.i)); }); });
   });
 
+  // Auto-advance every 2 seconds; pauses while hovered/focused, restarts after any manual change.
+  var timer = null, paused = false;
+  function start() { clearInterval(timer); timer = setInterval(function () { if (!paused && !document.hidden) go(cur + 1, 1); }, 2000); }
+  root.addEventListener('mouseenter', function () { paused = true; });
+  root.addEventListener('mouseleave', function () { paused = false; start(); });
+  root.addEventListener('focusin', function () { paused = true; });
+  root.addEventListener('focusout', function () { paused = false; start(); });
+  root.addEventListener('click', start);
+  start();
+
   // Keyboard: left / right arrows while focus is inside the carousel.
   root.addEventListener('keydown', function (e) {
     if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;

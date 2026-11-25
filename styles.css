@@ -1210,3 +1210,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
   .ee-appt__meta{font-size:13px;gap:8px}
   .ee-appt__meta span:first-child{white-space:nowrap}
 }
+
+/* ---- tighter gap between Engaged Employees and Delighted Customers ---- */
+.engaged{padding-bottom:48px}
+.delighted{padding-top:40px}
