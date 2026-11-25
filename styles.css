@@ -1147,3 +1147,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .pc-h em{font-style:normal;color:var(--acc)}
 .pc-cta{position:absolute;left:59px;top:361px;z-index:1;height:79px;padding:0 38px;display:flex;align-items:center;gap:20px;background:#fff;border-radius:12px;font-weight:800;font-size:25px;letter-spacing:.3px;color:var(--ink)}
 .pcard:hover .pc-cta{box-shadow:0 10px 24px rgba(0,0,0,.3)}
+
+/* centered section headings */
+.int-head,.int-head .h-xl,.int-head p{text-align:center;margin-left:auto;margin-right:auto}
+.int-head{align-items:center}
+.customize__intro{text-align:center}
