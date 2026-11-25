@@ -1304,3 +1304,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 
 /* pricing CTA: one consistent green across the whole band */
 .pcta__band{background:linear-gradient(135deg,#087a39 0%,#0a8540 100%)}
+
+/* pricing CTA: dots fade out gradually as they approach the text */
+.pcta__band::before{
+  -webkit-mask-image:linear-gradient(90deg,#000 calc(50% - 760px),rgba(0,0,0,.55) calc(50% - 560px),rgba(0,0,0,.2) calc(50% - 440px),transparent calc(50% - 340px),transparent calc(50% + 340px),rgba(0,0,0,.2) calc(50% + 440px),rgba(0,0,0,.55) calc(50% + 560px),#000 calc(50% + 760px));
+  mask-image:linear-gradient(90deg,#000 calc(50% - 760px),rgba(0,0,0,.55) calc(50% - 560px),rgba(0,0,0,.2) calc(50% - 440px),transparent calc(50% - 340px),transparent calc(50% + 340px),rgba(0,0,0,.2) calc(50% + 440px),rgba(0,0,0,.55) calc(50% + 560px),#000 calc(50% + 760px))}
