@@ -764,15 +764,15 @@ b,strong{font-weight:700}
 
 /* ---------- pricing + demo/webinar (redesign) ---------- */
 .pcta{background:#f7f7f7;padding-bottom:20px}
-.pcta__band{position:relative;overflow:hidden;background:linear-gradient(135deg,#014a24 0%,#00923f 60%,#00c853 100%);color:#fff;text-align:center;padding:80px 24px 120px}
-.pcta__deco{position:absolute;top:0;height:100%;width:auto;max-width:24%;pointer-events:none}
+.pcta__band{position:relative;overflow:hidden;background:linear-gradient(135deg,#014a24 0%,#00923f 60%,#00c853 100%);color:#fff;text-align:center;padding:52px 24px 96px}
+.pcta__deco{position:absolute;top:40%;transform:translateY(-50%);width:220px;height:auto;max-width:22%;pointer-events:none}
 .pcta__deco--l{left:0}.pcta__deco--r{right:0}
 .pcta__title,.pcta__sub,.pcta__view{position:relative}
-.pcta__title{font-size:56px;line-height:1.1;font-weight:700;letter-spacing:-.02em}
-.pcta__sub{max-width:600px;margin:16px auto 28px;font-size:20px;line-height:1.6}
-.pcta__view{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#14532d;font-size:16px;font-weight:700;letter-spacing:.02em;padding:18px 32px;border-radius:6px;transition:box-shadow .18s ease-out,transform .18s ease-out}
+.pcta__title{font-size:36px;line-height:1.1;font-weight:700;letter-spacing:-.02em}
+.pcta__sub{max-width:420px;margin:10px auto 20px;font-size:15px;line-height:1.55}
+.pcta__view{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#14532d;font-size:13px;font-weight:700;letter-spacing:.02em;padding:12px 24px;border-radius:5px;transition:box-shadow .18s ease-out,transform .18s ease-out}
 .pcta__view:hover{box-shadow:0 10px 24px rgba(0,0,0,.25);transform:translateY(-1px)}
-.pcta__cards{display:flex;gap:28px;justify-content:center;margin:-70px auto 0;padding:0 24px;max-width:1440px;position:relative}
+.pcta__cards{display:flex;gap:28px;justify-content:center;margin:-56px auto 0;padding:0 24px;max-width:1440px;position:relative}
 .pcta__card{flex:1;max-width:560px;background:#fff;border-radius:16px;padding:28px 32px 30px;box-shadow:0 12px 36px rgba(0,0,0,.10)}
 .pcta__ic{width:56px;height:56px;border-radius:14px;background:#f1f1f1;display:flex;align-items:center;justify-content:center;margin-bottom:22px}
 .pcta__ic svg{display:block}
@@ -781,12 +781,12 @@ b,strong{font-weight:700}
 .pcta__btn{display:inline-flex;align-items:center;justify-content:center;border:2px solid #000;border-radius:6px;color:#000;background:#fff;font-size:14px;font-weight:700;letter-spacing:.02em;padding:12px 26px;transition:background-color .18s ease-out,color .18s ease-out}
 .pcta__btn:hover{background:#000;color:#fff}
 @media (max-width:1024px){
-  .pcta__title{font-size:42px}.pcta__band{padding:64px 24px 110px}
+  .pcta__title{font-size:32px}.pcta__band{padding:48px 24px 90px}
   .pcta__card{padding:32px 28px 36px}.pcta__card h3{font-size:22px}.pcta__card p{font-size:15px}
 }
 @media (max-width:720px){
   .pcta__deco{display:none}
-  .pcta__title{font-size:34px}.pcta__sub{font-size:17px}
+  .pcta__title{font-size:28px}.pcta__sub{font-size:15px}
   .pcta__cards{flex-direction:column;gap:20px;margin-top:-70px}
   .pcta__card{max-width:none}
 }
