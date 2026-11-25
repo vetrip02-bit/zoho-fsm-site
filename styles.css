@@ -1214,3 +1214,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 /* ---- tighter gap between Engaged Employees and Delighted Customers ---- */
 .engaged{padding-bottom:48px}
 .delighted{padding-top:40px}
+
+/* ---- gap between Engaged Employees and Delighted Customers: tighter still ---- */
+.engaged{padding-bottom:16px}
+.delighted{padding-top:8px}
+
+/* ---- Engaged Employees: compact card, copy blocks closer together ---- */
+@media (min-width:1025px){
+  .ee-card{min-height:0;padding:36px 56px 28px;align-items:start}
+  .ee-copy{justify-content:flex-start}
+  .ee-caps{margin-top:28px;gap:20px}
+  .ee-sub{margin-top:28px;padding-bottom:0}
+  .ee-badges{margin-top:12px;padding-bottom:0}
+  .ee-stage{transform-origin:100% 0}
+}

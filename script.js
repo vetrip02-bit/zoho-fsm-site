@@ -11,7 +11,7 @@ function fitEngaged() {
     return;
   }
   delete fit.dataset.centered;
-  var s = Math.min(1, fit.offsetWidth / 548);
+  var s = Math.min(window.matchMedia('(min-width:1025px)').matches ? 0.84 : 1, fit.offsetWidth / 548);
   st.style.setProperty('--ee-s', String(s));
   fit.style.height = Math.round(600 * s) + 'px';
 }
