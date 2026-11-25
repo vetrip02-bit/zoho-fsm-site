@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=3e9d8538-6c42-4638-ade6-421948df8d9c
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zoho FSM | Field service management software</title>
+<meta name="description" content="Powerful and cost-effective field service management software that streamlines your field operations and elevates your customer service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+
+<!-- Header -->
+<header class="zbar">
+  <a href="#" aria-label="Zoho home"><img class="logo" src="assets/logo-zoho.svg" alt="Zoho" width="130" height="57"></a>
+  <nav class="zlinks" aria-label="Zoho products">
+    <a href="#">Billing</a>
+    <a href="#">Books</a>
+    <a href="#">Inventory</a>
+    <a href="#">CRM</a>
+    <a href="#">Desk</a>
+    <a href="#">Bigin</a>
+    <a href="#" class="all">All Products <img src="assets/chevron.svg" alt="" width="10" height="6"></a>
+  </nav>
+  <div class="utility">
+    <button aria-label="Search"><svg class="search" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#222" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button>
+    <button class="lang" aria-label="Language"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#222" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span>English</span></button>
+    <div class="account">
+      <a class="signin" href="#">Sign In</a>
+      <a class="btn btn-header" href="#">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<!-- Product nav (floating, sticky) -->
+<div class="pnav-wrap">
+  <nav class="pnav" aria-label="Product">
+    <a href="#" aria-label="Zoho FSM home"><img class="logo" src="assets/logo-zoho-fsm.svg" alt="Zoho FSM" width="125" height="44"></a>
+    <div class="pnav-right">
+    <ul class="menu">
+      <li><a href="#">Features <img class="chev" src="assets/chevron.svg" alt="" width="10" height="6"></a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Industries <img class="chev" src="assets/chevron.svg" alt="" width="10" height="6"></a></li>
+      <li><a href="#">Customers <img class="chev" src="assets/chevron.svg" alt="" width="10" height="6"></a></li>
+      <li><a href="#">Resources <img class="chev" src="assets/chevron.svg" alt="" width="10" height="6"></a></li>
+    </ul>
+    <a class="btn btn-header pnav-cta" href="#" tabindex="-1" aria-hidden="true">Get Started</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+<!-- Hero -->
+<section class="hero" aria-labelledby="hero-title">
+  <!-- Decorative background: dot grid, workflow paths, service-request / vehicle / payment icons -->
+  <div class="hero__deco" aria-hidden="true">
+    <svg viewBox="0 0 1440 600" width="1440" height="600" focusable="false">
+      <defs>
+        <pattern id="hd-dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3"/></pattern>
+        <linearGradient id="hd-fade-l" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+        <linearGradient id="hd-fade-r" x1="1" x2="0" y1="0" y2="0"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+        <linearGradient id="hd-tail-r" gradientUnits="userSpaceOnUse" x1="324" x2="400" y1="0" y2="0"><stop offset="0" stop-color="#15882e" stop-opacity="1"/><stop offset="1" stop-color="#15882e" stop-opacity="0"/></linearGradient>
+        <linearGradient id="hd-tail-l" gradientUnits="userSpaceOnUse" x1="1156" x2="1080" y1="0" y2="0"><stop offset="0" stop-color="#15882e" stop-opacity="1"/><stop offset="1" stop-color="#15882e" stop-opacity="0"/></linearGradient>
+        <linearGradient id="hd-tail-e" gradientUnits="userSpaceOnUse" x1="1388" x2="1440" y1="0" y2="0"><stop offset="0" stop-color="#15882e" stop-opacity="1"/><stop offset="1" stop-color="#15882e" stop-opacity="0.2"/></linearGradient>
+        <mask id="hd-mask-l"><rect width="300" height="560" fill="url(#hd-fade-l)"/></mask>
+        <mask id="hd-mask-r"><rect x="1140" width="300" height="560" fill="url(#hd-fade-r)"/></mask>
+      </defs>
+      <g class="hd-dots"><rect width="300" height="560" fill="url(#hd-dots)" mask="url(#hd-mask-l)"/><rect x="1140" width="300" height="560" fill="url(#hd-dots)" mask="url(#hd-mask-r)"/></g>
+      <g class="hd-path">
+        <path d="M0 100H48Q72 100 72 124V154Q72 178 96 178H110"/>
+        <path d="M166 178H252Q276 178 276 202V280Q276 304 300 304H316"/>
+        <path d="M1164 214H1190Q1210 214 1210 194V108Q1210 88 1230 88H1240"/>
+        <path d="M1296 88H1330Q1350 88 1350 108V222Q1350 242 1370 242H1388"/>
+        <circle cx="320" cy="304" r="4"/><circle cx="1160" cy="214" r="4"/>
+      </g>
+      <g class="hd-tails" fill="none"><path d="M324 304H400" stroke="url(#hd-tail-r)"/><path d="M1156 214H1080" stroke="url(#hd-tail-l)"/><path d="M1388 242H1440" stroke="url(#hd-tail-e)"/></g>
+      <g class="hd-icon" transform="translate(110 150)"><rect class="hd-tile" width="56" height="56" rx="16"/><g class="hd-glyph" transform="translate(14.2 14.2) scale(1.15)"><rect x="5" y="4" width="14" height="17" rx="2.5"/><rect x="9" y="2" width="6" height="3.5" rx="1"/><path d="M9 11h6M9 14.5h6M9 18h3.5"/></g></g>
+      <g class="hd-icon" transform="translate(1240 60)"><rect class="hd-tile" width="56" height="56" rx="16"/><g class="hd-glyph" transform="translate(14.2 14.2) scale(1.15)"><path d="M2 6.5h11.5v9H2zM13.5 9.5h4l3.5 3.5v2.5h-3.5"/><circle cx="6" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/></g></g>
+    </svg>
+  </div>
+  <div class="hero__copy">
+    <h1 id="hero-title" class="hero__title">Run every field service job from<br class="hero__br"> <em>one connected platform</em></h1>
+    <p class="hero__lede">Manage requests, schedule technicians, track work, and collect payments without switching tools.</p>
+    <a class="hero__cta" href="#trial">Start your free trial</a>
+  </div>
+
+  <!-- Product preview. Components: .dash, .appt, .tech-row, .phone, .tech-status -->
+  <div class="hero__preview">
+    <div class="dash">
+      <div class="dash__scroll" tabindex="0" role="region" aria-label="Zoho FSM dispatch console preview">
+        <div class="dash__frame">
+          <aside class="dash__side">
+            <img class="dash__logo" src="assets/logo-zoho-fsm.svg" alt="Zoho FSM" width="96" height="34">
+            <nav aria-label="Dispatch console preview menu">
+              <ul class="dash__menu">
+                <li><a href="#" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/></svg>Home</a></li>
+                <li><a href="#" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 3h6v3H9zM9 11h6M9 15h6"/></svg>Requests</a></li>
+                <li><a href="#" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 3h6v3H9zM9 13l2 2 4-4"/></svg>Work orders</a></li>
+                <li><a href="#" tabindex="-1" class="is-active" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6h12v9H2zM14 9h4l3 3v3h-7"/><circle cx="6" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>Dispatch</a></li>
+                <li><a href="#" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2.2.7 3.5 2.7 3.5 6"/></svg>Customers</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <div class="dash__main">
+            <h2 class="dash__title">Dispatch console</h2>
+            <div class="dash__body">
+              <section class="cal" aria-label="Weekly schedule">
+                <div class="cal__bar">
+                  <div class="cal__range">
+                    <button type="button" aria-label="Previous week" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+                    <span>Mon 24 – Fri 28</span>
+                    <button type="button" aria-label="Next week" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                  </div>
+                  <div class="cal__tools">
+                    <button type="button" aria-label="Search appointments" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg></button>
+                    <button type="button" aria-label="Filter appointments" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></button>
+                    <button type="button" aria-label="Choose date" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></button>
+                  </div>
+                </div>
+
+                <div class="cal__grid">
+                  <span class="cal__day" style="grid-column:2">Mon 24</span>
+                  <span class="cal__day" style="grid-column:3">Tue 25</span>
+                  <span class="cal__day" style="grid-column:4">Wed 26</span>
+                  <span class="cal__day" style="grid-column:5">Thu 27</span>
+                  <span class="cal__day" style="grid-column:6">Fri 28</span>
+
+                  <span class="cal__hour" style="grid-row:2">9:00 AM</span>
+                  <span class="cal__hour" style="grid-row:3">10:00 AM</span>
+                  <span class="cal__hour" style="grid-row:4">11:00 AM</span>
+                  <span class="cal__hour" style="grid-row:5">12:00 PM</span>
+                  <span class="cal__hour" style="grid-row:6">1:00 PM</span>
+                  <span class="cal__hour" style="grid-row:7">2:00 PM</span>
+                  <span class="cal__hour" style="grid-row:8">3:00 PM</span>
+                  <span class="cal__hour" style="grid-row:9">4:00 PM</span>
+
+                  <i class="cal__line" aria-hidden="true" style="grid-row:2"></i>
+                  <i class="cal__line" aria-hidden="true" style="grid-row:3"></i>
+                  <i class="cal__line" aria-hidden="true" style="grid-row:4"></i>
+                  <i class="cal__line" aria-hidden="true" style="grid-row:5"></i>
+                  <i class="cal__line" aria-hidden="true" style="grid-row:6"></i>
+                  <i class="cal__line" aria-hidden="true" style="grid-row:7"></i>
+                  <i class="cal__line" aria-hidden="true" style="grid-row:8"></i>
+                  <i class="cal__line" aria-hidden="true" style="grid-row:9"></i>
+
+                  <article class="appt appt--blue" style="grid-column:2;grid-row:6/8"><h3>Maintenance</h3><p>1:00 – 3:00 PM</p></article>
+                  <article class="appt appt--green" style="grid-column:3;grid-row:2/4"><h3>AC repair</h3><p>9:00 – 11:00 AM</p></article>
+                  <article class="appt appt--green" style="grid-column:4;grid-row:7/9"><h3>AC repair</h3><p>2:00 – 4:00 PM</p></article>
+                  <article class="appt appt--blue" style="grid-column:5;grid-row:2/5"><h3>Installation</h3><p>9:00 – 12:00 PM</p></article>
+                  <article class="appt appt--purple" style="grid-column:6;grid-row:6/8"><h3>Maintenance</h3><p>1:00 – 3:00 PM</p></article>
+                </div>
+              </section>
+
+              <section class="techs" aria-labelledby="techs-title">
+                <h3 id="techs-title">Technicians</h3>
+                <ul>
+                  <li class="tech-row"><span class="tech-row__avatar" aria-hidden="true">RM<i class="is-available"></i></span><span class="tech-row__name">Rohan M.<small>Available</small></span></li>
+                  <li class="tech-row"><span class="tech-row__avatar" aria-hidden="true">PS<i class="is-busy"></i></span><span class="tech-row__name">Priya S.<small>On job</small></span></li>
+                  <li class="tech-row"><span class="tech-row__avatar" aria-hidden="true">AK<i class="is-available"></i></span><span class="tech-row__name">Arjun K.<small>Available</small></span></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Replace assets/technician-photo.jpg with your own technician image -->
+    <div class="tech-status">
+      <img src="assets/technician-photo.jpg" alt="Smiling field technician holding a tablet" width="320" height="320">
+      <p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6h12v9H2zM14 9h4l3 3v3h-7"/><circle cx="6" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>Technician en route · 12 min</p>
+    </div>
+  </div>
+</section>
+
+<!-- Trusted by -->
+<section class="trusted">
+  <h2 class="h-s">Trusted by service businesses and contractors worldwide</h2>
+  <div class="logo-strip">
+    <div class="logo-track">
+      <!-- set 1 -->
+      <img src="assets/logo-metrokleen.png" alt="Metrokleen" width="112" height="30">
+      <img src="assets/logo-versofy-solar.png" alt="Versofy Solar" width="120" height="24">
+      <img src="assets/logo-kleenair.png" alt="Kleenair" width="72" height="42">
+      <img src="assets/logo-invision.png" alt="InVision" width="104" height="28">
+      <img src="assets/logo-luxer-one.png" alt="Luxer One" width="104" height="33">
+      <img src="assets/logo-mr-light.png" alt="Mr Light" width="104" height="41">
+      <img src="assets/logo-pelican.png" alt="Pelican QSR Solutions" width="104" height="28">
+      <img src="assets/logo-teamclean.png" alt="TeamClean" width="112" height="33">
+      <img src="assets/logo-alishan.png" alt="Alishan" width="112" height="27">
+      <img src="assets/logo-funtime.png" alt="FunTime" width="112" height="31">
+      <img src="assets/logo-forbtech.png" alt="Forbtech" width="112" height="30">
+      <img src="assets/logo-welsi.png" alt="Welsi" width="112" height="36">
+      <!-- set 2 (duplicate for a seamless loop) -->
+      <img src="assets/logo-metrokleen.png" alt="" aria-hidden="true" width="112" height="30">
+      <img src="assets/logo-versofy-solar.png" alt="" aria-hidden="true" width="120" height="24">
+      <img src="assets/logo-kleenair.png" alt="" aria-hidden="true" width="72" height="42">
+      <img src="assets/logo-invision.png" alt="" aria-hidden="true" width="104" height="28">
+      <img src="assets/logo-luxer-one.png" alt="" aria-hidden="true" width="104" height="33">
+      <img src="assets/logo-mr-light.png" alt="" aria-hidden="true" width="104" height="41">
+      <img src="assets/logo-pelican.png" alt="" aria-hidden="true" width="104" height="28">
+      <img src="assets/logo-teamclean.png" alt="" aria-hidden="true" width="112" height="33">
+      <img src="assets/logo-alishan.png" alt="" aria-hidden="true" width="112" height="27">
+      <img src="assets/logo-funtime.png" alt="" aria-hidden="true" width="112" height="31">
+      <img src="assets/logo-forbtech.png" alt="" aria-hidden="true" width="112" height="30">
+      <img src="assets/logo-welsi.png" alt="" aria-hidden="true" width="112" height="36">
+    </div>
+  </div>
+</section>
+
+<!-- Why Zoho FSM -->
+<section class="why">
+  <h2 class="h-xl-center">Why Zoho FSM?</h2>
+  <p class="body-l">Optimize every aspect of your field service business to cut back on redundant tasks and drive productivity.</p>
+</section>
+
+<!-- Effective Servicing -->
+<section class="effective">
+  <div class="panel" data-surface="dark">
+    <div class="body">
+      <div class="copy">
+        <h2 class="h-xl">Effective<br>Servicing</h2>
+        <ul class="features">
+          <li class="feature"><div class="tile"><img src="assets/icon-route.svg" alt="" width="28" height="28"></div><p class="body-feature"><b>Work order management</b><span>Simplify work order management by streamlining the process from getting requests and sending estimates to scheduling service appointments.</span></p></li>
+          <li class="feature"><div class="tile"><img src="assets/icon-list.svg" alt="" width="28" height="28"></div><p class="body-feature"><b>Customer and asset management</b><span>Organize customer data, job history, and customer assets efficiently.</span></p></li>
+          <li class="feature"><div class="tile"><img src="assets/icon-calendar.svg" alt="" width="28" height="28"></div><p class="body-feature"><b>Schedule and dispatch</b><span>Manage schedules on the Dispatch Console with Gantt, Grid, and Calendar views, and use maps for live location tracking.</span></p></li>
+          <li class="feature"><div class="tile"><img src="assets/icon-users.svg" alt="" width="28" height="28"></div><p class="body-feature"><b>Workforce management</b><span>Handle call center agents, dispatchers, and multi-skilled field agents using Profiles and Skills.</span></p></li>
+        </ul>
+      </div>
+      <div class="media" data-carousel>
+        <div class="stage">
+          <div class="stage-inner">
+          <img class="photo" src="assets/effective-servicing.png" alt="" width="724" height="606">
+          <div class="slide active" aria-hidden="false">
+            <img src="assets/slide-customer-management.png" alt="Customers menu with Contacts and Companies" style="left:142px;top:93px;width:441px;height:421px">
+            <svg class="hand" style="left:171px;top:459px" width="382" height="144" viewBox="0 0 300 113" aria-hidden="true"><path d="M25.52,75.2c-5.39-0.47-10.59-2.89-14.41-6.73c-3.82-3.83-6.23-9.04-6.68-14.43c-0.29-3.41,0.35-7.18,2.91-9.45 c3.16-2.8,8.18-2.3,11.89-0.28c2.62,1.42,5.1,4.12,4.44,7.03c-0.36,1.57-1.6,2.82-3.020,3.58c-1.42,0.76-3.02,1.1-4.6,1.43 c-3.49,0.73-7.51,1.35-10.28-0.88C3.77,53.89,3,51.22,2.7,48.69C1.47,38.52,6.17,28.34,13.01,20.71S29.49,7.92,38.19,2.5 c-3.61,0.51-17.43,1.15-21.04,1.66c3.88-0.39,17.15-1.28,21.04-1.66c-2.42,4.78-5.49,14.13-7.92,18.91" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/><text transform="translate(0 110)" font-family="Caveat, cursive" font-size="40" fill="#fff">Customer Management</text></svg>
+          </div>
+          <div class="slide" aria-hidden="true">
+            <img src="assets/slide-work-order-management.png" alt="Work Order Management menu: Requests, Estimates, Work Orders, Service Appointments, Invoices" style="left:142px;top:52px;width:441px;height:503px">
+            <svg class="hand" style="left:171px;top:459px" width="382" height="144" viewBox="0 0 300 113" aria-hidden="true"><path d="M25.52,75.2c-5.39-0.47-10.59-2.89-14.41-6.73c-3.82-3.83-6.23-9.04-6.68-14.43c-0.29-3.41,0.35-7.18,2.91-9.45 c3.16-2.8,8.18-2.3,11.89-0.28c2.62,1.42,5.1,4.12,4.44,7.03c-0.36,1.57-1.6,2.82-3.020,3.58c-1.42,0.76-3.02,1.1-4.6,1.43 c-3.49,0.73-7.51,1.35-10.28-0.88C3.77,53.89,3,51.22,2.7,48.69C1.47,38.52,6.17,28.34,13.01,20.71S29.49,7.92,38.19,2.5 c-3.61,0.51-17.43,1.15-21.04,1.66c3.88-0.39,17.15-1.28,21.04-1.66c-2.42,4.78-5.49,14.13-7.92,18.91" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/><text transform="translate(0 110)" font-family="Caveat, cursive" font-size="40" fill="#fff">Work-Order Management</text></svg>
+          </div>
+          <div class="slide" aria-hidden="true">
+            <img src="assets/slide-workforce.png" alt="Workforce Management menu: Users, Crew, Trips, Time Off" style="left:142px;top:82px;width:441px;height:443px">
+            <svg class="hand" style="left:171px;top:459px" width="382" height="144" viewBox="0 0 300 113" aria-hidden="true"><path d="M25.52,75.2c-5.39-0.47-10.59-2.89-14.41-6.73c-3.82-3.83-6.23-9.04-6.68-14.43c-0.29-3.41,0.35-7.18,2.91-9.45 c3.16-2.8,8.18-2.3,11.89-0.28c2.62,1.42,5.1,4.12,4.44,7.03c-0.36,1.57-1.6,2.82-3.020,3.58c-1.42,0.76-3.02,1.1-4.6,1.43 c-3.49,0.73-7.51,1.35-10.28-0.88C3.77,53.89,3,51.22,2.7,48.69C1.47,38.52,6.17,28.34,13.01,20.71S29.49,7.92,38.19,2.5 c-3.61,0.51-17.43,1.15-21.04,1.66c3.88-0.39,17.15-1.28,21.04-1.66c-2.42,4.78-5.49,14.13-7.92,18.91" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/><text transform="translate(0 110)" font-family="Caveat, cursive" font-size="40" fill="#fff">Workforce Management</text></svg>
+          </div>
+          <div class="slide" aria-hidden="true">
+            <img src="assets/slide-different-views.png" alt="Calendar, Gantt and Map views of scheduled appointments" style="left:142px;top:47px;width:441px;height:511px">
+            <svg class="hand" style="left:86px;top:452px" width="400" height="151" viewBox="0 0 300 113" aria-hidden="true"><path d="M25.52,75.2c-5.39-0.47-10.59-2.89-14.41-6.73c-3.82-3.83-6.23-9.04-6.68-14.43c-0.29-3.41,0.35-7.18,2.91-9.45 c3.16-2.8,8.18-2.3,11.89-0.28c2.62,1.42,5.1,4.12,4.44,7.03c-0.36,1.57-1.6,2.82-3.020,3.58c-1.42,0.76-3.02,1.1-4.6,1.43 c-3.49,0.73-7.51,1.35-10.28-0.88C3.77,53.89,3,51.22,2.7,48.69C1.47,38.52,6.17,28.34,13.01,20.71S29.49,7.92,38.19,2.5 c-3.61,0.51-17.43,1.15-21.04,1.66c3.88-0.39,17.15-1.28,21.04-1.66c-2.42,4.78-5.49,14.13-7.92,18.91" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/><text transform="translate(0 110)" font-family="Caveat, cursive" font-size="40" fill="#fff">Manage Schedules</text></svg>
+          </div>
+          <div class="slide" aria-hidden="true">
+            <img src="assets/slide-scheduled-maintenance.png" alt="Create Scheduled Maintenance plan form" style="left:142px;top:102px;width:441px;height:403px">
+            <svg class="hand" style="left:171px;top:459px" width="382" height="144" viewBox="0 0 300 113" aria-hidden="true"><path d="M25.52,75.2c-5.39-0.47-10.59-2.89-14.41-6.73c-3.82-3.83-6.23-9.04-6.68-14.43c-0.29-3.41,0.35-7.18,2.91-9.45 c3.16-2.8,8.18-2.3,11.89-0.28c2.62,1.42,5.1,4.12,4.44,7.03c-0.36,1.57-1.6,2.82-3.020,3.58c-1.42,0.76-3.02,1.1-4.6,1.43 c-3.49,0.73-7.51,1.35-10.28-0.88C3.77,53.89,3,51.22,2.7,48.69C1.47,38.52,6.17,28.34,13.01,20.71S29.49,7.92,38.19,2.5 c-3.61,0.51-17.43,1.15-21.04,1.66c3.88-0.39,17.15-1.28,21.04-1.66c-2.42,4.78-5.49,14.13-7.92,18.91" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/><text transform="translate(0 110)" font-family="Caveat, cursive" font-size="40" fill="#fff">Scheduled Maintenance</text></svg>
+          </div>
+          <div class="slide" aria-hidden="true">
+            <img src="assets/slide-job-sheet.png" alt="HVAC preventive maintenance checklist job sheet" style="left:142px;top:139px;width:441px;height:327px">
+            <svg class="hand" style="left:86px;top:452px" width="400" height="151" viewBox="0 0 300 113" aria-hidden="true"><path d="M25.52,75.2c-5.39-0.47-10.59-2.89-14.41-6.73c-3.82-3.83-6.23-9.04-6.68-14.43c-0.29-3.41,0.35-7.18,2.91-9.45 c3.16-2.8,8.18-2.3,11.89-0.28c2.62,1.42,5.1,4.12,4.44,7.03c-0.36,1.57-1.6,2.82-3.020,3.58c-1.42,0.76-3.02,1.1-4.6,1.43 c-3.49,0.73-7.51,1.35-10.28-0.88C3.77,53.89,3,51.22,2.7,48.69C1.47,38.52,6.17,28.34,13.01,20.71S29.49,7.92,38.19,2.5 c-3.61,0.51-17.43,1.15-21.04,1.66c3.88-0.39,17.15-1.28,21.04-1.66c-2.42,4.78-5.49,14.13-7.92,18.91" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/><text transform="translate(0 110)" font-family="Caveat, cursive" font-size="40" fill="#fff">Job Sheet</text></svg>
+          </div>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="c-arrow on-dark" data-prev aria-label="Previous slide"><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <div class="dots on-dark-dots" role="tablist">
+            <button class="dot-hit active" aria-label="Slide 1"><span class="dot"></span></button>
+            <button class="dot-hit" aria-label="Slide 2"><span class="dot"></span></button>
+            <button class="dot-hit" aria-label="Slide 3"><span class="dot"></span></button>
+            <button class="dot-hit" aria-label="Slide 4"><span class="dot"></span></button>
+            <button class="dot-hit" aria-label="Slide 5"><span class="dot"></span></button>
+            <button class="dot-hit" aria-label="Slide 6"><span class="dot"></span></button>
+          </div>
+          <button class="c-arrow on-dark" data-next aria-label="Next slide"><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Efficient Operations -->
+<section class="efficient" aria-labelledby="eo-title">
+  <svg class="eo-sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="eo-i-home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5M5.5 10v10h13V10M10 20v-6h4v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="eo-i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="eo-i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M7 15h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="eo-i-chart" viewBox="0 0 24 24"><path d="M4 4v16h16M9 17v-5M13 17V8M17 17v-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="eo-i-coins" viewBox="0 0 24 24"><ellipse cx="9" cy="6.5" rx="5.5" ry="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 6.5v4c0 1.4 2.5 2.5 5.5 2.5M3.5 10.5v4c0 1.4 2.5 2.5 5.5 2.5M3.5 14.5v3c0 1.4 2.5 2.5 5.5 2.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><ellipse cx="15.5" cy="12.5" rx="5.5" ry="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 12.5v4c0 1.4 2.5 2.5 5.5 2.5s5.5-1.1 5.5-2.5v-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+      <symbol id="eo-i-download" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5v8M8.5 12.5l3.5 3.5 3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="eo-i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="eo-i-bell" viewBox="0 0 24 24"><path d="M6 17.5V11a6 6 0 0 1 12 0v6.5l1.5 1.5h-15zM10 21h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="eo-i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 20c.8-3.5 3.6-5.5 7-5.5s6.200 2 7 5.500" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="eo-i-check" viewBox="0 0 24 24"><path d="m6 12.500 4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="eo-i-eye" viewBox="0 0 24 24"><path d="M2.500 12S6 5.500 12 5.500 21.500 12 21.500 12 18 18.500 12 18.500 2.500 12 2.500 12z" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.800"/></symbol>
+      <symbol id="eo-i-image" viewBox="0 0 24 24"><rect x="3.500" y="4.500" width="17" height="15" rx="2.500" fill="none" stroke="currentColor" stroke-width="1.800"/><circle cx="9" cy="10" r="1.600" fill="none" stroke="currentColor" stroke-width="1.600"/><path d="m4 17 5-4.500 4 3.500 3-2.500 4.500 4" fill="none" stroke="currentColor" stroke-width="1.600" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+      <symbol id="eo-i-drop" viewBox="0 0 24 24"><path d="M12 3.500c3.500 4.200 6 7.200 6 10.500a6 6 0 0 1-12 0c0-3.300 2.500-6.300 6-10.500z" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linejoin="round"/></symbol>
+      <symbol id="eo-i-fields" viewBox="0 0 24 24"><path d="M4 7h16M4 12h11M4 17h16" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round"/></symbol>
+      <symbol id="eo-i-layout" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.500" fill="none" stroke="currentColor" stroke-width="1.800"/><rect x="13" y="4" width="7" height="7" rx="1.500" fill="none" stroke="currentColor" stroke-width="1.800"/><rect x="4" y="13" width="7" height="7" rx="1.500" fill="none" stroke="currentColor" stroke-width="1.800"/><rect x="13" y="13" width="7" height="7" rx="1.500" fill="none" stroke="currentColor" stroke-width="1.800"/></symbol>
+      <symbol id="eo-i-left" viewBox="0 0 24 24"><path d="m14.500 6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="eo-i-right" viewBox="0 0 24 24"><path d="m9.500 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="eo-i-down" viewBox="0 0 24 24"><path d="m6 9.500 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="eo-card" data-eo role="region" aria-roledescription="carousel" aria-label="Efficient Operations: Zoho FSM invoicing, payments, PDFs and reports">
+    <header class="eo-head">
+      <h2 class="eo-title" id="eo-title">Efficient<br>Operations</h2>
+      <p class="eo-lede">Turn completed work into invoices, payments, and clear business insight.</p>
+    </header>
+
+    <div class="eo-frame">
+      <div class="eo-bar">
+        <img class="eo-logo" src="assets/logo-zoho-fsm.svg" alt="Zoho FSM" width="125" height="44">
+        <div class="eo-bar__tools" aria-hidden="true">
+          <svg><use href="#eo-i-search"/></svg>
+          <svg><use href="#eo-i-bell"/></svg>
+          <span class="eo-avatar"><svg><use href="#eo-i-user"/></svg></span>
+        </div>
+      </div>
+      <div class="eo-body">
+        <img class="eo-photo" src="assets/efficient-operations.png" alt="Field technician reviewing a job on a tablet" width="1530" height="1212" loading="lazy">
+        <div class="eo-main">
+          <ol class="eo-flow" aria-label="Workflow" data-eo-flow></ol>
+          <div class="eo-stage" tabindex="0" aria-live="off" data-eo-stage></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="eo-foot">
+      <nav class="eo-caps" aria-label="Efficient Operations capabilities" data-eo-caps></nav>
+      <div class="eo-controls">
+        <button type="button" class="eo-arrow" data-eo-prev aria-label="Previous slide"><svg aria-hidden="true"><use href="#eo-i-left"/></svg></button>
+        <div class="eo-dots" data-eo-dots></div>
+        <button type="button" class="eo-arrow" data-eo-next aria-label="Next slide"><svg aria-hidden="true"><use href="#eo-i-right"/></svg></button>
+      </div>
+    </div>
+    <p class="eo-sr" role="status" aria-live="polite" data-eo-live></p>
+  </div>
+</section>
+
+<!-- Engaged Employees -->
+<section class="engaged" aria-labelledby="ee-title">
+  <div class="ee-card reveal">
+    <div class="ee-copy">
+      <h2 class="ee-title" id="ee-title">Engaged<br>Employees</h2>
+      <ul class="ee-caps">
+        <li class="ee-cap"><span class="ee-tile"><img src="assets/icon-calendar.svg" alt="" width="28" height="28"></span><span class="ee-cap__label">Appointments</span></li>
+        <li class="ee-cap"><span class="ee-tile"><img src="assets/icon-navigate.svg" alt="" width="28" height="28"></span><span class="ee-cap__label">Navigation</span></li>
+        <li class="ee-cap"><span class="ee-tile"><img src="assets/icon-file-text-2.svg" alt="" width="28" height="28"></span><span class="ee-cap__label">Job updates</span></li>
+        <li class="ee-cap"><span class="ee-tile"><svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><rect x="3.5" y="6.5" width="21" height="15" rx="2.5"/><path d="M3.5 12h21M8 17h4"/></svg></span><span class="ee-cap__label">Payments</span></li>
+      </ul>
+      <p class="ee-sub">Everything technicians need,<br>wherever the job takes them.</p>
+    </div>
+
+    <div class="ee-visual">
+      <div class="ee-fit">
+        <div class="ee-stage">
+          <!-- Service address -->
+          <section class="ee-addr" aria-label="Service address">
+            <header class="ee-addr__bar"><h3>Service Address</h3>
+              <span class="ee-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l9 9-9 9-9-9z"/><path d="M9 12.5V11a1 1 0 0 1 1-1h5m0 0l-1.5-1.5M15 10l-1.5 1.5"/></svg></span>
+              <span class="ee-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></svg></span>
+            </header>
+            <div class="ee-addr__body">
+              <p class="ee-addr__name">Proverb Foundation</p>
+              <p class="ee-addr__line">3771 Marietta Street, Santa Rosa, CA</p>
+              <svg class="ee-map" viewBox="0 0 270 150" role="img" aria-label="Map showing the service location near Santa Rosa" preserveAspectRatio="xMidYMid slice">
+                <rect width="270" height="150" fill="#eceae6"/>
+                <path d="M0 0h190c-6 22-30 30-26 56 4 24 30 28 18 56-8 18-24 28-30 38H0z" fill="#cfe6d3"/>
+                <path d="M196 0h74v150h-96c18-20 36-36 30-62-6-30-16-56-8-88z" fill="#e4e1db"/>
+                <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M0 52h270M92 0v150M0 108h270M196 0v150M140 20l-30 60"/></g>
+                <path d="M152 150c30-24 60-34 118-30" fill="none" stroke="#f3c889" stroke-width="5" stroke-linecap="round"/>
+                <path d="M118 36c8 6 6 16-4 18" fill="none" stroke="#bcd9c3" stroke-width="2"/>
+                <g transform="translate(112 24)"><path d="M12 0C5.4 0 0 5.2 0 11.7 0 20 12 33 12 33s12-13 12-21.3C24 5.2 18.6 0 12 0z" fill="#1f7a37"/><circle cx="12" cy="11.5" r="4.6" fill="#fff"/></g>
+                <g transform="translate(222 104)"><circle r="9" fill="#fff" stroke="#6b6f6c" stroke-width="1.2"/><text text-anchor="middle" y="4" font-size="10" font-weight="500" fill="#333636" font-family="inherit">12</text></g>
+              </svg>
+            </div>
+          </section>
+
+          <!-- Job progress (second phone, sits behind the primary one) -->
+          <section class="ee-phone ee-phone--job" aria-label="Job progress screen">
+            <header class="ee-job__bar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6l-6 6 6 6"/></svg><span>AP-10</span><svg class="ee-dots" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="19" r="1.6"/></svg></header>
+            <h3 class="ee-job__title">Job progress</h3>
+            <ul class="ee-job__list">
+              <li><span class="ee-check" aria-hidden="true"></span><div><p class="ee-job__h">Checklist</p><p class="ee-job__s">5 of 5 completed</p></div><svg class="ee-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></li>
+              <li class="ee-job__notes"><span class="ee-check" aria-hidden="true"></span><div><p class="ee-job__h">Notes &amp; photos</p>
+                <div class="ee-photos">
+                  <img src="assets/technician-photo.jpg" alt="Photo of a technician reviewing a job on a tablet" width="56" height="56">
+                  <img src="assets/technician-photo.jpg" alt="Close-up photo of the technician's tablet at the job site" width="56" height="56" class="ee-photos__b">
+                </div>
+                <p class="ee-sig"><svg viewBox="0 0 120 34" role="img" aria-label="Customer signature"><path d="M4 24c8-14 12-18 16-14s-6 18 0 16 8-14 14-12-2 12 6 10 8-8 14-8 2 8 8 6 10-12 16-10 4 10 12 6 10-6 16-4" /></svg><span>Customer signature</span></p>
+              </div></li>
+              <li><span class="ee-check" aria-hidden="true"></span><div><p class="ee-job__h">Payment</p><p class="ee-job__s">$250.00</p></div><svg class="ee-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></li>
+            </ul>
+            <p class="ee-paid"><span class="ee-check" aria-hidden="true"></span>Payment received</p>
+          </section>
+
+          <!-- Primary technician phone -->
+          <section class="ee-phone ee-phone--main" aria-label="Technician home screen">
+            <div class="ee-screen">
+            <header class="ee-home__bar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Home</span>
+              <svg class="ee-home__r" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15zM10 21h4"/></svg></header>
+            <div class="ee-welcome">
+              <div>
+                <p class="ee-welcome__hi">Welcome Charles</p>
+                <p class="ee-welcome__time">10:20 <small>AM</small></p>
+                <span class="ee-checkin" aria-disabled="true">Check in</span>
+              </div>
+              <span class="ee-tech" role="img" aria-label="Illustration of a technician carrying a wrench"></span>
+            </div>
+            <h3 class="ee-today"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>Today’s appointments</h3>
+            <ul class="ee-appts">
+              <li><div class="ee-appt__top"><strong>AP-10</strong><span class="ee-pill">In progress</span></div><p class="ee-appt__s"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Started 12 hrs ago</p><div class="ee-appt__meta"><span>11:12AM, 12 Jul 23</span><span>1:00 Hrs</span></div></li>
+              <li><div class="ee-appt__top"><strong>AP-09</strong><span class="ee-pill">Partially Paid</span></div><p class="ee-appt__s"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>15 Hrs overdue</p><div class="ee-appt__meta"><span>8:00PM - 9:00PM, 12 Jul 23</span><span>1:00 Hrs</span></div></li>
+            </ul>
+            </div>
+            <p class="ee-status"><span class="ee-check" aria-hidden="true"></span>Checked in · 10:20 AM</p>
+          </section>
+        </div>
+      </div>
+      <div class="ee-badges">
+        <a href="#" class="ee-badge"><img src="assets/badge-app-store.png" alt="Download on the App Store" width="119" height="41"></a>
+        <a href="#" class="ee-badge"><img src="assets/badge-google-play.png" alt="Get it on Google Play" width="133" height="41"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Delighted Customers -->
+<section class="delighted">
+  <div class="top">
+    <div class="d-head">
+      <h2 class="h-xl">Delighted<br>Customers</h2>
+    </div>
+    <div class="journey">
+      <div class="track">
+        <img class="track-line" src="assets/journey-track-line.svg" alt="">
+        <div class="step-col"><div class="step"><span class="num">01</span><span class="lbl">On site</span></div></div>
+        <div class="step-col"><div class="step"><span class="num">02</span><span class="lbl">Stay in touch</span></div></div>
+        <div class="step-col"><div class="step"><span class="num">03</span><span class="lbl">Get paid</span></div></div>
+        <div class="step-col"><div class="step goal"><span class="num">04</span><span class="lbl">Close the loop</span></div></div>
+      </div>
+      <div class="j-cards">
+        <article class="j-card">
+          <div class="photo"><img src="assets/journey-1.png" alt="Technician with a tool bag" width="300" height="380"><span class="chip"><img src="assets/chip-check.svg" alt="" width="28" height="28">Fixed on first visit</span></div>
+          <div class="txt"><h3>Fix it the first time</h3><p>Send fully equipped technicians and improve first-time fix rates.</p></div>
+        </article>
+        <article class="j-card">
+          <div class="photo"><img src="assets/journey-2.png" alt="Hand holding a phone" width="300" height="380"><span class="chip"><img src="assets/chip-bell.svg" alt="" width="28" height="28">Reminder sent <small>· SMS</small></span></div>
+          <div class="txt"><h3>Keep customers informed</h3><p>Send timely updates by email and SMS, so no one is left waiting.</p></div>
+        </article>
+        <article class="j-card">
+          <div class="photo"><img src="assets/journey-3.png" alt="Armchair in a living room" width="300" height="380"><span class="chip"><img src="assets/chip-card.svg" alt="" width="28" height="28">Paid online <small>· $248.00</small></span></div>
+          <div class="txt"><h3>Get paid your way</h3><p>Give customers the choice of online and offline payments.</p></div>
+        </article>
+        <article class="j-card">
+          <div class="photo"><img src="assets/journey-4.png" alt="Customer smiling at her phone" width="300" height="380"><span class="chip"><span class="stars">★★★★★</span>5.0 <small>· Signed</small></span></div>
+          <div class="txt"><h3>Close the loop</h3><p>Share service reports and collect feedback, job ratings and signatures.</p></div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="strip">
+    <div><p class="s-title">Turn every job into a five-star review.</p><p class="body-s gray">See how Zoho FSM handles the full service cycle.</p></div>
+    <a class="btn btn-primary" href="#trial">Start free trial</a>
+  </div>
+</section>
+
+<!-- Customer stories -->
+<section class="stories" aria-labelledby="customer-stories-title">
+  <div class="stories__panel">
+    <header class="stories__head">
+      <p class="stories__eyebrow">Customer stories</p>
+      <h2 class="stories__title" id="customer-stories-title">Trusted by teams in the field.</h2>
+    </header>
+    <div class="testimonial-grid">
+    <figure class="story-card reveal">
+      <span class="story-card__mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 18v-5.2C5 8.9 6.7 6.6 9.8 6l.5 1.7c-1.6.5-2.4 1.6-2.5 3.1H10V18H5Zm9 0v-5.2c0-3.9 1.7-6.2 4.8-6.8l.5 1.7c-1.6.5-2.4 1.6-2.5 3.1H19V18h-5Z"/></svg></span>
+      <blockquote class="story-card__quote"><p><q>Real-time display of each project status is a problem solver. Creation of job locations and easy invoicing for completed jobs are features we love.</q></p></blockquote>
+      <figcaption class="story-card__author">
+        <span class="story-card__avatar" aria-hidden="true"><svg><use href="#eo-i-user"/></svg></span>
+        <span class="story-card__who"><span class="story-card__name">Javier Martinez</span><span class="story-card__role">CFO, Pelican QSR Solutions</span></span>
+      </figcaption>
+    </figure>
+    <figure class="story-card reveal">
+      <span class="story-card__mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 18v-5.2C5 8.9 6.7 6.6 9.8 6l.5 1.7c-1.6.5-2.4 1.6-2.5 3.1H10V18H5Zm9 0v-5.2c0-3.9 1.7-6.2 4.8-6.8l.5 1.7c-1.6.5-2.4 1.6-2.5 3.1H19V18h-5Z"/></svg></span>
+      <blockquote class="story-card__quote"><p><q>Constantly developing and improving their software has led to Zoho FSM being an absolute powerhouse of a field service management platform.</q></p></blockquote>
+      <figcaption class="story-card__author">
+        <span class="story-card__avatar" aria-hidden="true"><svg><use href="#eo-i-user"/></svg></span>
+        <span class="story-card__who"><span class="story-card__name">Clifford de Meyer</span><span class="story-card__role">Director, Citi-Tech South Africa</span></span>
+      </figcaption>
+    </figure>
+    </div>
+  </div>
+</section>
+
+<!-- With you from start to end (flow chart) -->
+<section class="flow" data-surface="dark">
+  <div class="f-head"><h2 class="h-m">With you from start to end</h2><p class="body-l">Zoho FSM helps you segue into different field service processes on one unified platform.</p></div>
+  <div class="f-wrap">
+    <div class="chart" role="img" aria-label="Zoho FSM process flow: Get a service request, send an estimate, turn it to a work order, schedule the job, dispatch the ideal team, use Trips to log travel time, work at site, generate a service report on the go, complete the job, raise an invoice, record payments.">
+      <img class="conn-side" src="assets/flow-connectors-side.svg" alt="">
+      <img class="conn-main" src="assets/flow-connectors-main.svg" alt="">
+      <div class="fn step" style="left:158px;top:102px">Get a Service<br>Request</div>
+      <div class="fn step" style="left:326px;top:224px">Send an<br>Estimate</div>
+      <div class="fn step" style="left:326px;top:384px">Turn it to a<br>Work Order</div>
+      <div class="fn step" style="left:326px;top:545px">Schedule<br>the job</div>
+      <div class="fn step" style="left:581px;top:545px">Dispatch the<br>ideal team</div>
+      <div class="fn step" style="left:581px;top:375px">Work at site</div>
+      <div class="fn step" style="left:581px;top:205px">Complete<br>the job</div>
+      <div class="fn step" style="left:789px;top:102px">Raise an<br>invoice</div>
+      <div class="fn goal" style="left:1006px;top:298px">Record<br>Payments</div>
+      <div class="fn mobile" style="left:578px;top:459px">Use Trips to<br>log travel time</div>
+      <div class="fn mobile" style="left:578px;top:289px">Generate<br>service report<br>on the go</div>
+      <div class="fn note" style="left:166px;top:220px">Customers can<br>approve estimates<br>in a click!</div>
+      <div class="fn note" style="left:167px;top:380px">Split services into<br>smaller service<br>Tasks</div>
+      <div class="fn note" style="left:167px;top:541px">Locate field<br>agents using<br>Maps</div>
+      <div class="fn note" style="left:36px;top:541px">Drag and drop<br>to schedule<br>on the Gantt</div>
+      <div class="fn note" style="left:744px;top:541px">Filter agents by<br>Skill and Territory</div>
+      <div class="fn note wide" style="left:744px;top:371px">Log timesheets and<br>upload photos with<br>the Mobile App</div>
+      <div class="fn note" style="left:744px;top:201px">Get customer's<br>feedback and<br>sign-off</div>
+      <div class="fn note" style="left:928px;top:42px">Turn work order<br>to an invoice</div>
+      <div class="fn note" style="left:1140px;top:173px">Collect payments<br>online or offline</div>
+    </div>
+    <ul class="legend">
+      <li><span class="sw sw-step"></span>Core step</li>
+      <li><span class="sw sw-mobile"></span>On the mobile app</li>
+      <li><span class="sw sw-note"></span>What you can do</li>
+      <li><span class="sw sw-goal"></span>Goal</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Customize for your industry -->
+<section class="customize" aria-labelledby="customize-title">
+  <div class="customize__inner">
+    <div class="customize__intro">
+      <h2 id="customize-title">Customize for your industry</h2>
+      <p>Tailor Zoho FSM to suit the unique needs of your business.</p>
+    </div>
+    <div class="feature-cards">
+      <article class="feature-card">
+        <div class="feature-card__art">
+          <svg viewBox="0 0 320 130" role="img" aria-label="Three overlapping user profile icons in green, orange and blue">
+            <g class="u-green"><circle cx="62" cy="65" r="60"/><circle cx="62" cy="49" r="13"/><path d="M37 90v-4a16 16 0 0 1 16-16h18a16 16 0 0 1 16 16v4z"/></g>
+            <g class="u-orange"><circle cx="160" cy="65" r="60"/><circle cx="160" cy="49" r="13"/><path d="M135 90v-4a16 16 0 0 1 16-16h18a16 16 0 0 1 16 16v4z"/></g>
+            <g class="u-blue"><circle cx="258" cy="65" r="60"/><circle cx="258" cy="49" r="13"/><path d="M233 90v-4a16 16 0 0 1 16-16h18a16 16 0 0 1 16 16v4z"/></g>
+          </svg>
+        </div>
+        <h3>Roles and permissions</h3>
+        <p>Create custom profiles and give every team the right access.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-card__art">
+          <svg viewBox="0 0 320 130" role="img" aria-label="Text field, dropdown and checkbox field types">
+            <g class="t-grey"><rect x="6" y="16" width="96" height="98" rx="14"/><path d="M38 44h32M54 44v34M38 90h50" class="t-line"/></g>
+            <g class="t-blue"><rect x="112" y="16" width="96" height="98" rx="14"/><rect x="124" y="50" width="72" height="30" rx="8" class="t-inner"/><path d="M178 62l5 5 5-5" class="t-line"/></g>
+            <g class="t-green"><rect x="218" y="16" width="96" height="98" rx="14"/><rect x="242" y="42" width="48" height="46" rx="9" class="t-inner"/><path d="M254 66l9 9 15-18" class="t-line"/></g>
+          </svg>
+        </div>
+        <h3>Custom fields</h3>
+        <p>Capture industry-specific information in every module.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-card__art">
+          <img src="assets/illus-gears-new.png" alt="Two connected gears representing workflow automation" width="214" height="239">
+        </div>
+        <h3>Workflow automation</h3>
+        <p>Automate routine work with rules and custom functions.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Integrations -->
+<section class="integrations" data-surface="dark">
+  <div class="int-head"><h2 class="h-xl">Extend Zoho FSM with integrations</h2><p class="body-l">Build a formidable system that runs your business.</p></div>
+  <div class="int-cards">
+    <article class="int-card"><div class="int-top"><span class="int-tile" style="background:#0f5fd7"><img src="assets/int-zoho-books.png" alt="Zoho Books"></span><h3>Zoho Books / Invoice</h3></div><p class="body-l">Powered by the Zoho Finance Suite, Zoho FSM enables you to use a variety of payment gateways to receive online payments.</p></article>
+    <article class="int-card"><div class="int-top"><span class="int-tile" style="background:#e42527"><img src="assets/int-crm.png" alt="Zoho CRM"></span><h3>Zoho CRM</h3></div><p class="body-l">Extend Zoho CRM for your field service business with the Zoho FSM extension.</p></article>
+    <article class="int-card"><div class="int-top"><span class="int-tile" style="background:#1faa59"><img src="assets/int-whatsapp.png" alt="WhatsApp"></span><h3>WhatsApp</h3></div><p class="body-l">Engage clients instantly using Zoho FSM’s WhatsApp integration for real-time communication.</p></article>
+    <article class="int-card"><div class="int-top"><span class="int-tile" style="background:#1faa59"><img src="assets/int-desk.png" alt="Zoho Desk"></span><h3>Zoho Desk</h3></div><p class="body-l">Effortlessly enable on-site support through Zoho FSM’s integration with Zoho Desk.</p></article>
+    <article class="int-card"><div class="int-top"><span class="int-tile" style="background:#e8a60c"><img src="assets/int-bigin.png" alt="Bigin by Zoho CRM"></span><h3>Bigin</h3></div><p class="body-l">Enhance your small business’s field service operations by integrating Zoho FSM with Bigin by Zoho CRM.</p></article>
+    <article class="int-card"><div class="int-top"><span class="int-tile" style="background:#0f5fd7"><img src="assets/int-api.png" alt="REST API"></span><h3>REST APIs</h3></div><p class="body-l">Use Zoho FSM’s REST APIs to integrate with other third-party applications.</p></article>
+  </div>
+</section>
+
+<!-- Pricing CTA + Demo/Webinar -->
+<section class="pcta">
+  <div class="pcta__band" data-surface="dark">
+    <h2 class="pcta__title">Cost-effective prices.</h2>
+    <p class="pcta__sub">Our volume-based pricing plan ensures you only pay for the appointments you create.</p>
+    <a class="pcta__view" href="#">VIEW PRICING <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <div class="pcta__cards">
+    <article class="pcta__card">
+      <span class="pcta__ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15c-1.5 1-2 4-2 6 2 0 5-.5 6-2M12 15l-3-3a22 22 0 0 1 2-4 12 12 0 0 1 10-5c0 3-1 8-5 12a22 22 0 0 1-4 2z"/><circle cx="15" cy="9" r="1.3"/></svg></span>
+      <h3>Request a product demo</h3>
+      <p>Experience Zoho FSM with a personalized product demo.</p>
+      <a class="pcta__btn" href="#">BOOK NOW</a>
+    </article>
+    <article class="pcta__card">
+      <span class="pcta__ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M10 9.5v5l4.5-2.5z"/></svg></span>
+      <h3>Attend our live webinar</h3>
+      <p>Learn more about Zoho FSM on our live webinar sessions.</p>
+      <a class="pcta__btn" href="#">REGISTER NOW</a>
+    </article>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final" id="trial">
+  <div class="benefits">
+    <div class="benefit">
+      <span class="benefit__ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+      <h2>Effortless management.</h2>
+      <p>Schedule, dispatch and track every job in one place.</p>
+    </div>
+    <div class="benefit">
+      <span class="benefit__ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+      <h2>Enhanced productivity.</h2>
+      <p>Less admin for the office, more jobs done per technician.</p>
+    </div>
+    <div class="benefit">
+      <span class="benefit__ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+      <h2>Profitable growth.</h2>
+      <p>Faster invoicing and clearer numbers as you scale.</p>
+    </div>
+  </div>
+  <a class="btn btn-primary" href="#">START YOUR 15-DAY FREE TRIAL</a>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="f-links">
+    <div class="f-container">
+      <div class="promo-stack">
+        <a class="pcard pc-g" href="https://www.zoho.com/fsm/webinars.html"><div class="pc-in">
+          <div class="pc-logo"><svg class="pc-truck" viewBox="0 0 80 56" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 40V14a4 4 0 0 1 4-4h36a4 4 0 0 1 4 4v8l10 8v12a2 2 0 0 1-2 2h-6"/><path d="M10 40H6M24 44h18"/><circle cx="17" cy="44" r="6"/><circle cx="54" cy="44" r="6"/></svg><b><span>Zoho</span>FSM</b></div>
+          <div class="pc-pill"><u></u>Weekly live</div>
+          <h4 class="pc-h">Get a detailed tour of Zoho FSM in our <em>weekly webinars.</em></h4>
+          <span class="pc-cta">Register now <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div></a>
+        <a class="pcard pc-k" href="https://marketplace.zoho.com/app/crm/zoho-fsm-for-zoho-crm"><div class="pc-in">
+          <div class="pc-logo"><svg class="pc-truck" viewBox="0 0 80 56" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 40V14a4 4 0 0 1 4-4h36a4 4 0 0 1 4 4v8l10 8v12a2 2 0 0 1-2 2h-6"/><path d="M10 40H6M24 44h18"/><circle cx="17" cy="44" r="6"/><circle cx="54" cy="44" r="6"/></svg><b><span>Zoho</span>FSM</b></div>
+          <div class="pc-pill"><u></u>CRM extension</div>
+          <h4 class="pc-h">Merge sales and field service with the <em>Zoho FSM</em> extension for <em>Zoho CRM.</em></h4>
+          <span class="pc-cta">Get it now <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div></a>
+      </div>
+      <div class="cols">
+        <div class="col w281"><div class="grp"><h4>Features</h4><ul><li><a href="#">Contacts</a></li><li><a href="#">Companies</a></li><li><a href="#">Assets</a></li><li><a href="#">Services and Parts</a></li><li><a href="#">Work Order management</a></li><li><a href="#">Schedule and Dispatch</a></li><li><a href="#">Zoho FSM mobile app</a></li><li><a href="#">Scheduled Maintenance</a></li><li><a href="#">Workforce Management</a></li><li><a href="#">Invoicing and Payments</a></li><li><a href="#">Reports</a></li><li><a href="#">Email</a></li><li><a href="#">Webforms</a></li><li><a href="#">Notifications</a></li></ul></div></div>
+        <div class="col w281">
+          <div class="grp"><h4>Integrations</h4><ul><li><a href="#">Zoho Books</a></li><li><a href="#">Zoho Invoice</a></li><li><a href="#">Zoho CRM</a></li><li><a href="#">Bigin</a></li><li><a href="#">Zoho Desk</a></li><li><a href="#">WhatsApp</a></li></ul></div>
+          <div class="grp"><h4>Resources</h4><ul><li><a href="#">Quick Start Guide</a></li><li><a href="#">Webinars</a></li><li><a href="#">Knowledge Base</a></li><li><a href="#">FAQs</a></li><li><a href="#">Tips</a></li><li><a href="#">Community</a></li><li><a href="#">API Documentation</a></li><li><a href="#">Release Notes</a></li></ul></div>
+        </div>
+        <div class="col">
+          <div class="grp"><h4>Industries</h4><ul><li><a href="#">HVAC</a></li><li><a href="#">Plumbing</a></li><li><a href="#">Electrical</a></li><li><a href="#">Roofing</a></li><li><a href="#">Cleaning Service</a></li><li><a href="#">Garage Door</a></li><li><a href="#">Chimney Sweep</a></li><li><a href="#">General Contracting</a></li><li><a href="#">Landscaping</a></li><li><a href="#">Pool Service</a></li><li><a href="#">Pest Control</a></li></ul></div>
+          <div class="grp"><h4>Quick links</h4><ul><li><a href="#">Pricing</a></li><li><a href="#">Contact Us</a></li><li><a href="#">Request demo</a></li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="f-support">
+    <div class="f-container2">
+      <a class="mail" href="mailto:support@zohofsm.com"><img src="assets/mail-icon.png" alt="" width="22" height="16">support@zohofsm.com</a>
+      <div class="apps"><a href="#"><img src="assets/badge-app-store-footer.png" alt="Download on the App Store" width="119" height="41"></a><a href="#"><img src="assets/badge-google-play-footer.png" alt="Get it on Google Play" width="133" height="41"></a></div>
+    </div>
+  </div>
+  <div class="f-global">
+    <div class="search-lang">
+      <form class="search" role="search" onsubmit="return false"><input type="search" aria-label="Search Zoho"><button class="s-btn" aria-label="Search"><img src="assets/search-icon-footer.png" alt="" width="20" height="20"></button></form>
+      <button class="lang"><img src="assets/flag-us.png" alt="" width="22" height="16">English</button>
+    </div>
+    <ul class="legal"><li><a href="#">Contact Us</a></li><li><a href="#">Security</a></li><li><a href="#">Compliance</a></li><li><a href="#">IPR Complaints</a></li><li><a href="#">Anti-spam Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Refund Policy</a></li><li><a href="#">Trademark Policy</a></li><li><a href="#">Cookie Policy</a></li><li><a href="#">GDPR Compliance</a></li><li><a href="#">Abuse Policy</a></li></ul>
+  </div>
+  <div class="f-copy">© 2026, Zoho Corporation Pvt. Ltd. All Rights Reserved.</div>
+</footer>
+
+<!-- Sales launcher (fixed) -->
+<a class="launcher" href="#" aria-label="Contact sales">
+  <span class="l-label"><span class="pill">Contact sales</span><img class="pointer" src="assets/launcher-pointer.svg" alt="" width="17" height="17"></span>
+  <span class="l-btn"><svg class="l-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.2 7.6L3.5 20.5l1.4-4.9A8.5 8.5 0 1 1 21 11.5Z"/><circle cx="8.5" cy="11.5" r=".6" fill="currentColor"/><circle cx="12.5" cy="11.5" r=".6" fill="currentColor"/><circle cx="16.5" cy="11.5" r=".6" fill="currentColor"/></svg></span>
+</a>
+
+</div>
+<script src="script.js"></script>
+<script src="efficient-operations.js"></script>
+</body>
+</html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="3e9d8538-6c42-4638-ade6-421948df8d9c" data-app-host="app.netlify.com" data-account-tier="free"></script>
