@@ -1270,3 +1270,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .step-col{width:auto;flex:1 1 auto}
 .step-col:last-child{flex:none}
 .step-col:not(:last-child)::after{margin:0 12px 0 12px}
+
+/* engaged employees: deep-green icons, same treatment as Efficient Operations tiles */
+.ee-tile img,.ee-tile svg{filter:brightness(0) saturate(100%) invert(24%) sepia(35%) saturate(900%) hue-rotate(95deg) brightness(.85)}
