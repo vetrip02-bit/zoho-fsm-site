@@ -1301,3 +1301,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
   background:radial-gradient(circle,rgba(255,255,255,.22) 0 1.2px,transparent 1.7px) 0 0/38px 38px;
   -webkit-mask-image:linear-gradient(90deg,#000 calc(50% - 400px),transparent calc(50% - 330px),transparent calc(50% + 330px),#000 calc(50% + 400px));
   mask-image:linear-gradient(90deg,#000 calc(50% - 400px),transparent calc(50% - 330px),transparent calc(50% + 330px),#000 calc(50% + 400px))}
+
+/* pricing CTA: one consistent green across the whole band */
+.pcta__band{background:linear-gradient(135deg,#087a39 0%,#0a8540 100%)}
