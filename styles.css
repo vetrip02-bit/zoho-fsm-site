@@ -1274,13 +1274,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 /* engaged employees: deep-green icons, same treatment as Efficient Operations tiles */
 .ee-tile img,.ee-tile svg{filter:brightness(0) saturate(100%) invert(24%) sepia(35%) saturate(900%) hue-rotate(95deg) brightness(.85)}
 
-/* engaged employees: map as a very mild backdrop across the whole card, faded out behind the text */
-.ee-card{position:relative;overflow:hidden}
-.ee-card>.ee-bgmap{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.3;stroke:none;pointer-events:none;
-  -webkit-mask-image:linear-gradient(90deg,transparent 28%,#000 52%);mask-image:linear-gradient(90deg,transparent 28%,#000 52%)}
-.ee-copy,.ee-visual{position:relative;z-index:1}
-@media (max-width:1024px){.ee-card>.ee-bgmap{-webkit-mask-image:linear-gradient(180deg,transparent 40%,#000 62%);mask-image:linear-gradient(180deg,transparent 40%,#000 62%)}}
-
 /* pricing CTA: demo/webinar cards removed, so the band no longer needs the overlap room */
 .pcta{padding-bottom:0}
 .pcta__band{padding-bottom:56px}
@@ -1293,3 +1286,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 /* hero: more breathing room under the nav bar */
 .hero{padding-top:72px}
 @media (max-width:720px){.hero{padding-top:52px}}
+
+/* journey photo chips: slightly smaller */
+.chip{height:40px;gap:8px;padding:6px 14px 6px 6px;font-size:12.5px;line-height:16px;bottom:14px;left:14px}
+.chip img{width:24px;height:24px}
+.chip small{font-size:11.5px}
