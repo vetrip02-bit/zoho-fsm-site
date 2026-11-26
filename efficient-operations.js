@@ -143,32 +143,131 @@
   var CAL = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="14" height="12.5" rx="2"/><path d="M3 8.5h14M7 3v3M13 3v3"/></svg>';
   var CARD = '<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="6.5" width="21" height="15" rx="2.5"/><path d="M3.5 12h21M8 17h5"/></svg>';
   var MAIL = '<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6.5" width="20" height="15" rx="2.5"/><path d="M4.8 8.5L14 15.5l9.2-7"/></svg>';
-  function payField(label, value, icon, x, y, wide) {
-    return '<div class="eo-pay__f' + (wide ? ' eo-pay__f--wide' : '') + '" style="left:calc(' + x + '*var(--u));top:calc(' + y + '*var(--u))"><label>' + label + '</label><div><span>' + value + '</span>' + (icon || '') + '</div></div>';
+  var PLANE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4 18-7z"/></svg>';
+  var SHARE = '<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 17V5M9.5 9.5L14 5l4.5 4.5M6 14v8h16v-8"/></svg>';
+  var CALG = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="14" height="12.5" rx="2"/><path d="M3 8.5h14M7 3v3M13 3v3"/></svg>';
+  var CLOCK = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 6v4.2l2.8 1.6"/></svg>';
+  var PRIO = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#e8603a"><path d="M5 9l5-5 5 5M5 15l5-5 5 5"/></svg>';
+  function lead(svg, text) { return '<span class="lead">' + svg + '</span>' + text; }
+  // A form field placed on the 785 x 708 form card (x, y, width, optional variant class).
+  function payField(label, value, icon, x, y, w, cls) {
+    return '<div class="eo-pay__f' + (cls ? ' ' + cls : '') + (w === 708 ? ' eo-pay__f--wide' : '') + '" style="left:calc(' + x + '*var(--u));top:calc(' + y + '*var(--u))' + (w && w !== 708 ? ';width:calc(' + w + '*var(--u))' : '') + '"><label>' + label + '</label><div><span>' + value + '</span>' + (icon || '') + '</div></div>';
   }
-  function paySlide() {
-    return '<div class="eo-pay" role="img" aria-label="' + ALTS[2] + '">' +
+  function steps(active) {
+    var names = ['Work order', 'Invoice', 'Payment', 'Report'], h = '<ol class="eo-pay__steps">';
+    names.forEach(function (n, i) {
+      var cls = i === active ? ' class="is-on"' : (i > active ? ' class="is-todo"' : '');
+      h += '<li' + cls + '><i>' + (i < active ? CHECK : (i + 1)) + '</i>' + n + '</li>' + (i < 3 ? '<hr' + (i >= active ? ' class="is-todo"' : '') + '>' : '');
+    });
+    return h + '</ol>';
+  }
+  function buttons(primary, icon) {
+    return '<div class="eo-pay__btns"><span class="eo-pay__btn eo-pay__btn--p">' + icon + primary + '</span><span class="eo-pay__btn eo-pay__btn--s">' + (primary === 'Record payment' ? 'Cancel' : 'Save draft') + '</span></div>';
+  }
+  // Shared shell: photo + toast, step bar, form card, receipt panel, "next" toast.
+  function shell(c) {
+    return '<div class="eo-pay' + (c.cls ? ' ' + c.cls : '') + '" role="img" aria-label="' + c.alt + '">' +
       '<div class="eo-pay__photo"><img src="assets/eo-pay-photo.webp" width="418" height="753" alt="" loading="lazy">' +
-        '<div class="eo-pay__toast"><span class="eo-pay__tick"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg></span><span><b>Invoice sent</b><span>Customer ready to make payment</span></span></div></div>' +
-      '<ol class="eo-pay__steps">' +
-        '<li><i>' + CHECK + '</i>Work order</li><hr><li><i>' + CHECK + '</i>Invoice</li><hr><li class="is-on"><i>3</i>Payment</li><hr class="is-todo"><li class="is-todo"><i>4</i>Report</li></ol>' +
-      '<div class="eo-pay__form"><h3>Record payment</h3><span class="eo-pay__chip">' + CHECK + 'Invoice INV-000008</span>' +
-        payField('Customer', 'Zylker Inc', CHEV, 40, 106) + payField('Amount received', '$88.50', '', 413, 106) +
-        payField('Payment date', '12 Jul 2023', CAL, 40, 196) + payField('Payment method', 'Credit card', CHEV, 413, 196) +
-        payField('Reference number', 'PAY-000042', '', 40, 285) + payField('Deposit to', 'Undeposited funds', CHEV, 413, 285) +
-        payField('Notes', 'Full payment received on site', '', 40, 375, true) +
-        '<div class="eo-pay__sum"><div><span>Invoice amount</span><b>$88.50</b></div><div><span>Amount applied</span><b>$88.50</b></div><div><span>Balance due</span><b class="is-green">$0.00</b></div></div>' +
-        '<div class="eo-pay__btns"><span class="eo-pay__btn eo-pay__btn--p">' + CARD + 'Record payment</span><span class="eo-pay__btn eo-pay__btn--s">Cancel</span></div></div>' +
-      '<div class="eo-pay__rcpt"><p>Payment receipt</p><div class="eo-pay__card"><h4>Zylker Inc</h4><div class="eo-pay__no">RECEIPT<b>PAY-000042</b></div><span class="eo-pay__chip">' + CHECK + 'Paid</span>' +
-        '<dl><div><dt>Invoice</dt><dd>INV-000008</dd></div><div><dt>Payment method</dt><dd>Credit card</dd></div><div><dt>Payment date</dt><dd>12 Jul 2023</dd></div><div><dt>Amount received</dt><dd>$88.50</dd></div><div><dt>Balance</dt><dd class="is-green">$0.00</dd></div></dl>' +
-        '<div class="eo-pay__tot"><span>Total</span><b>$88.50</b></div><div class="eo-pay__bar"></div></div></div>' +
-      '<div class="eo-pay__next"><span class="eo-pay__mail">' + MAIL + '</span><span><b>Send receipt next</b><span>Email confirmation to the customer</span></span></div>' +
+        '<div class="eo-pay__toast"><span class="eo-pay__tick">' + CHECK + '</span><span><b>' + c.toast[0] + '</b><span>' + c.toast[1] + '</span></span></div></div>' +
+      steps(c.step) +
+      '<div class="eo-pay__form"><h3>' + c.title + '</h3><span class="eo-pay__chip">' + CHECK + c.chip + '</span>' + c.form + '</div>' +
+      '<div class="eo-pay__rcpt"><p>' + c.sideLabel + '</p>' + c.side + '</div>' +
+      '<div class="eo-pay__next" style="left:calc(' + c.next[0] + '*var(--u));top:calc(' + c.next[1] + '*var(--u));width:calc(' + c.next[2] + '*var(--u));height:calc(' + c.next[3] + '*var(--u))"><span class="eo-pay__mail">' + c.next[4] + '</span><span><b>' + c.next[5] + '</b><span>' + c.next[6] + '</span></span></div>' +
     '</div>';
   }
+  function tick(small) { return '<span class="eo-pay__tick2">' + CHECK + '</span>'; }
+
+  function paySlide() {
+    return shell({
+      alt: ALTS[2], step: 2, toast: ['Invoice sent', 'Customer ready to make payment'],
+      title: 'Record payment', chip: 'Invoice INV-000008',
+      form:
+        payField('Customer', 'Zylker Inc', CHEV, 40, 106, 340) + payField('Amount received', '$88.50', '', 413, 106, 335) +
+        payField('Payment date', '12 Jul 2023', CAL, 40, 196, 340) + payField('Payment method', 'Credit card', CHEV, 413, 196, 335) +
+        payField('Reference number', 'PAY-000042', '', 40, 285, 340) + payField('Deposit to', 'Undeposited funds', CHEV, 413, 285, 335) +
+        payField('Notes', 'Full payment received on site', '', 40, 375, 708) +
+        '<div class="eo-pay__sum"><div><span>Invoice amount</span><b>$88.50</b></div><div><span>Amount applied</span><b>$88.50</b></div><div><span>Balance due</span><b class="is-green">$0.00</b></div></div>' +
+        buttons('Record payment', CARD),
+      sideLabel: 'Payment receipt',
+      side: '<div class="eo-pay__card"><h4>Zylker Inc</h4><div class="eo-pay__no">RECEIPT<b>PAY-000042</b></div><span class="eo-pay__chip">' + CHECK + 'Paid</span>' +
+        '<dl><div><dt>Invoice</dt><dd>INV-000008</dd></div><div><dt>Payment method</dt><dd>Credit card</dd></div><div><dt>Payment date</dt><dd>12 Jul 2023</dd></div><div><dt>Amount received</dt><dd>$88.50</dd></div><div><dt>Balance</dt><dd class="is-green">$0.00</dd></div></dl>' +
+        '<div class="eo-pay__tot"><span>Total</span><b>$88.50</b></div><div class="eo-pay__bar"></div></div>',
+      next: [1216, 731, 430, 83, MAIL, 'Send receipt next', 'Email confirmation to the customer']
+    });
+  }
+
+  var HTML_SLIDES = [
+    // 1. Work order
+    function () {
+      return shell({
+        alt: ALTS[0], step: 0, toast: ['New service request', 'Ready to create a work order'],
+        title: 'Create work order', chip: 'Request details captured',
+        form:
+          payField('Customer', 'Zylker Inc', CHEV, 40, 100, 340) + payField('Contact', 'Charles Stone', CHEV, 413, 100, 335) +
+          payField('Service', 'Microwave repair', CHEV, 40, 177, 340) + payField('Priority', lead(PRIO, 'High'), CHEV, 413, 177, 335) +
+          payField('Preferred date', lead(CALG, '12 Jul 2023'), CHEV, 40, 254, 340) + payField('Time slot', lead(CLOCK, '11:00 AM – 12:00 PM'), CHEV, 413, 254, 335) +
+          payField('Technician', 'David Miller', CHEV, 40, 331, 708) +
+          payField('Notes', 'Inspect heating issue and replace bulb if required.', '', 40, 408, 708, 'eo-pay__f--tall') +
+          '<div class="eo-pay__tbl" style="top:calc(512*var(--u))"><div class="row head" style="grid-template-columns:301fr 200fr 207fr"><span>Service line</span><span class="c">Qty</span><span class="r">Estimated cost</span></div>' +
+          '<div class="row line" style="grid-template-columns:301fr 200fr 207fr;height:calc(44*var(--u))"><span class="item">Microwave repair</span><span class="c">1.00</span><span class="r">$78.00</span></div></div>' +
+          buttons('Create work order', CHECK),
+        sideLabel: 'Work order preview',
+        side: '<div class="eo-pay__card"><div class="eo-pay__flow"><div class="eo-pay__hd"><h4>Zylker Inc</h4><div class="eo-pay__no">WORK ORDER<b>WO-000124</b></div></div>' +
+          '<span class="eo-pay__chip" style="margin-top:calc(12*var(--u))">' + CALG + 'Scheduled</span>' +
+          '<dl class="eo-pay__kv"><div><dt>Customer</dt><dd>Charles Stone</dd></div><div><dt>Service</dt><dd>Microwave repair</dd></div><div><dt>Scheduled time</dt><dd>12 Jul 2023,<br>11:00 AM – 12:00 PM</dd></div><div><dt>Assigned technician</dt><dd>David Miller</dd></div></dl></div>' +
+          '<div class="eo-pay__est"><span>Total estimate</span><b>$78.00</b></div><div class="eo-pay__bar"></div></div>',
+        next: [1204, 722, 372, 74, CALG, 'Schedule appointment next', 'Assign date, time, and technician']
+      });
+    },
+    // 2. Invoice
+    function () {
+      return shell({
+        alt: ALTS[1], step: 1, toast: ['Job complete on site', 'Invoice ready before they leave'],
+        title: 'Create invoice', chip: 'Auto-filled from work order',
+        form:
+          payField('Customer', 'Zylker Inc', CHEV, 40, 108, 340, 'eo-pay__f--lg') + payField('Invoice number', 'INV-000008', '<span class="tag">Auto</span>', 400, 108, 348, 'eo-pay__f--lg') +
+          '<div class="eo-pay__tbl" style="top:calc(200*var(--u))"><div class="row head" style="grid-template-columns:336fr 125fr 130fr 117fr;height:calc(46*var(--u))"><span>Item &amp; description</span><span class="c">Qty</span><span class="c">Rate</span><span class="r">Amount</span></div>' +
+          '<div class="row line" style="grid-template-columns:336fr 125fr 130fr 117fr;height:calc(79*var(--u))"><span class="item">Microwave repair<small>Labour · 1 hr</small></span><span class="c item">1.00</span><span class="c item">70.00</span><span class="r b item">70.00</span></div>' +
+          '<div class="row line" style="grid-template-columns:336fr 125fr 130fr 117fr;height:calc(79*var(--u))"><span class="item">Microwave bulb<small>Part · replacement</small></span><span class="c item">1.00</span><span class="c item">8.00</span><span class="r b item">8.00</span></div></div>' +
+          '<div class="eo-pay__tot2"><div><span>Subtotal</span><b>$78.00</b></div><div><span>Tax (13.46%)</span><b>$10.50</b></div></div>' +
+          '<div class="eo-pay__due"><span>Total due</span><b>$88.50</b></div>' +
+          buttons('Send invoice', PLANE),
+        sideLabel: 'Live preview',
+        side: '<div class="eo-pay__card eo-pay__card--tilt"><div class="eo-pay__flow"><div class="eo-pay__hd"><h4>Zylker Inc</h4><div class="eo-pay__no">INVOICE<b>INV-000008</b></div></div>' +
+          '<dl class="eo-pay__kv eo-pay__kv--r" style="margin-top:calc(26*var(--u))"><div><dt style="font-size:calc(14*var(--u))">Billed to</dt></div><div style="min-height:calc(24*var(--u))"><dt style="color:#161b18;font-weight:600;font-size:calc(17*var(--u))">Zylker Inc</dt></div></dl>' +
+          '<dl class="eo-pay__kv eo-pay__kv--r" style="margin-top:calc(26*var(--u))"><div style="min-height:calc(40*var(--u))"><dt style="font-size:calc(18*var(--u))">Microwave repair</dt><dd>$70.00</dd></div><div style="min-height:calc(40*var(--u))"><dt style="font-size:calc(18*var(--u))">Microwave bulb</dt><dd>$8.00</dd></div><div style="min-height:calc(40*var(--u))"><dt style="color:#8a918d">Tax (13.46%)</dt><dd style="font-weight:400;color:#8a918d">$10.50</dd></div></dl></div>' +
+          '<div class="eo-pay__est" style="top:calc(362*var(--u))"><span>Total</span><b>$88.50</b></div><div class="eo-pay__bar"></div></div>',
+        next: [1131, 726, 275, 66, CARD, 'Collect payment next', 'Card, link or on the spot']
+      });
+    },
+    function () { return paySlide(); },
+    // 4. Report
+    function () {
+      return shell({
+        alt: ALTS[3], step: 3, cls: 'eo-pay--c', toast: ['Payment received', 'Ready to document the completed service'],
+        title: 'Create service report', chip: 'Pre-filled from appointment',
+        form:
+          payField('Service appointment', 'AP-10', '', 36, 100, 195, 'eo-pay__f--sm') + payField('Customer', 'Zylker Inc', CHEV, 257, 100, 243, 'eo-pay__f--sm') + payField('Technician', 'David Miller', CHEV, 527, 100, 221, 'eo-pay__f--sm') +
+          '<span style="position:absolute;left:calc(36*var(--u));top:calc(190*var(--u));font-size:calc(15*var(--u));letter-spacing:calc(.6*var(--u));color:#5d6561">SERVICE SUMMARY</span>' +
+          payField('', 'Microwave heating issue resolved and bulb replaced.', '', 34, 205, 714, 'eo-pay__f--sum') +
+          '<div style="position:absolute;left:calc(36*var(--u));top:calc(296*var(--u));width:calc(600*var(--u))"><div class="eo-pay__chk">' + tick() + 'Diagnosed heating issue</div><div class="eo-pay__chk">' + tick() + 'Replaced microwave bulb</div><div class="eo-pay__chk">' + tick() + 'Tested appliance operation</div></div>' +
+          payField('Duration', '1 hr', '', 36, 430, 122, 'eo-pay__f--sm') + payField('Parts used', 'Microwave bulb · 1', '', 183, 430, 195, 'eo-pay__f--sm') + payField('Technician comments', 'Unit tested and operating normally.', '', 400, 430, 348, 'eo-pay__f--sm') +
+          '<div style="position:absolute;left:calc(36*var(--u));top:calc(520*var(--u));font-size:calc(17*var(--u));color:#5d6561">Customer feedback<div style="margin-top:calc(14*var(--u));display:flex;align-items:center;gap:calc(26*var(--u));font-size:calc(21*var(--u));color:#2a302c"><span class="eo-pay__stars" style="font-size:calc(34*var(--u))">★★★★★</span>Excellent service</div></div>' +
+          '<div class="eo-pay__f" style="left:calc(423*var(--u));top:calc(520*var(--u));width:calc(325*var(--u))"><label>Customer signature</label><div class="eo-pay__sig" style="height:calc(60*var(--u));font-size:calc(40*var(--u));padding-left:calc(30*var(--u))"><span>Charles Stone</span></div></div>' +
+          '<div class="eo-pay__btns" style="top:calc(618*var(--u))"><span class="eo-pay__btn eo-pay__btn--p" style="width:calc(208*var(--u))">' + PLANE + 'Create report</span><span class="eo-pay__btn eo-pay__btn--s">Save draft</span></div>',
+        sideLabel: 'Service report preview',
+        side: '<div class="eo-pay__card"><div class="eo-pay__flow"><div class="eo-pay__hd"><h4>Zylker Inc</h4><div class="eo-pay__no">SERVICE REPORT<b>SR-000031</b><span class="eo-pay__chip" style="margin-top:calc(6*var(--u));height:calc(28*var(--u));padding:0 calc(14*var(--u));font-size:calc(16*var(--u))">' + CHECK + 'Completed</span></div></div>' +
+          '<dl class="eo-pay__kv eo-pay__kv--r" style="margin-top:calc(10*var(--u))"><div><dt>Appointment</dt><dd>AP-10</dd></div><div><dt>Technician</dt><dd>David Miller</dd></div><div><dt>Service</dt><dd>Microwave repair</dd></div><div><dt>Date</dt><dd>12 Jul 2023</dd></div><div><dt>Duration</dt><dd>1 hr</dd></div></dl>' +
+          '<div style="margin-top:calc(14*var(--u))"><div class="eo-pay__chk eo-pay__chk--s">' + tick() + 'Diagnosed heating issue</div><div class="eo-pay__chk eo-pay__chk--s">' + tick() + 'Replaced microwave bulb</div><div class="eo-pay__chk eo-pay__chk--s">' + tick() + 'Tested appliance operation</div></div>' +
+          '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:calc(14*var(--u));font-size:calc(17*var(--u));color:#5d6561">Customer rating<span style="color:#161b18;font-weight:600">5.0 <span class="eo-pay__stars" style="font-size:calc(22*var(--u))">★★★★★</span></span></div>' +
+          '<div style="margin-top:calc(16*var(--u));font-size:calc(16*var(--u));color:#5d6561">Customer signature<div class="eo-pay__sig" style="font-size:calc(40*var(--u));padding-left:calc(24*var(--u));line-height:calc(48*var(--u))">Charles Stone</div></div></div><div class="eo-pay__bar"></div></div>',
+        next: [1165, 755, 372, 68, SHARE, 'Share report', 'Email or download the completed PDF']
+      });
+    }
+  ];
   stage.innerHTML = SLIDES.map(function (s, i) {
     return '<div class="eo-slide" id="eo-slide-' + s.id + '" role="group" aria-roledescription="slide" aria-label="' + (i + 1) + ' of ' + len + ': ' + s.label + '">' +
-      (i === 2 ? paySlide() :
-      '<img class="eo-slide__img" src="assets/eo-slide-' + (i + 1) + '.webp?v=2" width="1792" height="878" loading="' + (i === 0 ? 'eager' : 'lazy') + '" alt="' + ALTS[i] + '">') + '</div>';
+      HTML_SLIDES[i]() + '</div>';
   }).join('');
   var panels = Array.prototype.slice.call(stage.children);
 
