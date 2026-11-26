@@ -137,9 +137,38 @@
   var len = SLIDES.length, cur = 0;
 
   var ALTS = ['Create work order: Zylker Inc, microwave repair, technician David Miller, with a live work order preview.','Create invoice auto-filled from the work order: microwave repair and bulb, total $88.50, with a live invoice preview.','Record payment of $88.50 by credit card against invoice INV-000008, with a payment receipt preview.','Create service report with completed checklist, customer rating and signature, with a service report preview.'];
+  // Slide 3 ("Record payment") is real, editable HTML text rather than a picture.
+  var CHECK = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg>';
+  var CHEV = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg>';
+  var CAL = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="14" height="12.5" rx="2"/><path d="M3 8.5h14M7 3v3M13 3v3"/></svg>';
+  var CARD = '<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="6.5" width="21" height="15" rx="2.5"/><path d="M3.5 12h21M8 17h5"/></svg>';
+  var MAIL = '<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6.5" width="20" height="15" rx="2.5"/><path d="M4.8 8.5L14 15.5l9.2-7"/></svg>';
+  function payField(label, value, icon, x, y, wide) {
+    return '<div class="eo-pay__f' + (wide ? ' eo-pay__f--wide' : '') + '" style="left:calc(' + x + '*var(--u));top:calc(' + y + '*var(--u))"><label>' + label + '</label><div><span>' + value + '</span>' + (icon || '') + '</div></div>';
+  }
+  function paySlide() {
+    return '<div class="eo-pay" role="img" aria-label="' + ALTS[2] + '">' +
+      '<div class="eo-pay__photo"><img src="assets/eo-pay-photo.webp" width="418" height="753" alt="" loading="lazy">' +
+        '<div class="eo-pay__toast"><span class="eo-pay__tick"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5l3.6 3.6 7.4-8"/></svg></span><span><b>Invoice sent</b><span>Customer ready to make payment</span></span></div></div>' +
+      '<ol class="eo-pay__steps">' +
+        '<li><i>' + CHECK + '</i>Work order</li><hr><li><i>' + CHECK + '</i>Invoice</li><hr><li class="is-on"><i>3</i>Payment</li><hr class="is-todo"><li class="is-todo"><i>4</i>Report</li></ol>' +
+      '<div class="eo-pay__form"><h3>Record payment</h3><span class="eo-pay__chip">' + CHECK + 'Invoice INV-000008</span>' +
+        payField('Customer', 'Zylker Inc', CHEV, 40, 106) + payField('Amount received', '$88.50', '', 413, 106) +
+        payField('Payment date', '12 Jul 2023', CAL, 40, 196) + payField('Payment method', 'Credit card', CHEV, 413, 196) +
+        payField('Reference number', 'PAY-000042', '', 40, 285) + payField('Deposit to', 'Undeposited funds', CHEV, 413, 285) +
+        payField('Notes', 'Full payment received on site', '', 40, 375, true) +
+        '<div class="eo-pay__sum"><div><span>Invoice amount</span><b>$88.50</b></div><div><span>Amount applied</span><b>$88.50</b></div><div><span>Balance due</span><b class="is-green">$0.00</b></div></div>' +
+        '<div class="eo-pay__btns"><span class="eo-pay__btn eo-pay__btn--p">' + CARD + 'Record payment</span><span class="eo-pay__btn eo-pay__btn--s">Cancel</span></div></div>' +
+      '<div class="eo-pay__rcpt"><p>Payment receipt</p><div class="eo-pay__card"><h4>Zylker Inc</h4><div class="eo-pay__no">RECEIPT<b>PAY-000042</b></div><span class="eo-pay__chip">' + CHECK + 'Paid</span>' +
+        '<dl><div><dt>Invoice</dt><dd>INV-000008</dd></div><div><dt>Payment method</dt><dd>Credit card</dd></div><div><dt>Payment date</dt><dd>12 Jul 2023</dd></div><div><dt>Amount received</dt><dd>$88.50</dd></div><div><dt>Balance</dt><dd class="is-green">$0.00</dd></div></dl>' +
+        '<div class="eo-pay__tot"><span>Total</span><b>$88.50</b></div><div class="eo-pay__bar"></div></div></div>' +
+      '<div class="eo-pay__next"><span class="eo-pay__mail">' + MAIL + '</span><span><b>Send receipt next</b><span>Email confirmation to the customer</span></span></div>' +
+    '</div>';
+  }
   stage.innerHTML = SLIDES.map(function (s, i) {
     return '<div class="eo-slide" id="eo-slide-' + s.id + '" role="group" aria-roledescription="slide" aria-label="' + (i + 1) + ' of ' + len + ': ' + s.label + '">' +
-      '<img class="eo-slide__img" src="assets/eo-slide-' + (i + 1) + '.webp?v=2" width="1792" height="878" loading="' + (i === 0 ? 'eager' : 'lazy') + '" alt="' + ALTS[i] + '"></div>';
+      (i === 2 ? paySlide() :
+      '<img class="eo-slide__img" src="assets/eo-slide-' + (i + 1) + '.webp?v=2" width="1792" height="878" loading="' + (i === 0 ? 'eager' : 'lazy') + '" alt="' + ALTS[i] + '">') + '</div>';
   }).join('');
   var panels = Array.prototype.slice.call(stage.children);
 
