@@ -1375,3 +1375,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .stories-img{padding:0;background:#fbf7f4}
 .stories-img{padding:0 24px}
 .stories-img img{display:block;width:100%;max-width:1080px;height:auto;margin:0 auto}
+
+/* Engaged Employees: workflow gallery is its own band under the original section */
+.engaged-flow{padding:0 0 72px}

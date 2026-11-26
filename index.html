@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261126e">
+<link rel="stylesheet" href="styles.css?v=20261126f">
 </head>
 <body>
 <div class="page">
@@ -341,8 +341,56 @@
 </section>
 
 <!-- Engaged Employees -->
-<section class="engaged engaged--image" aria-label="Engaged Employees">
-  <img class="ee-image" src="assets/engaged-employees.webp" width="2000" height="957" loading="lazy" alt="Engaged Employees: everything technicians need, wherever the job takes them. Appointments, navigation, job updates and payments in the mobile app, available on the App Store and Google Play.">
+<section class="engaged" aria-labelledby="ee-title">
+  <div class="ee-card reveal">
+    <div class="ee-copy">
+      <h2 class="ee-title" id="ee-title">Engaged<br>Employees</h2>
+      <p class="ee-sub">Everything technicians need,<br>wherever the job takes them.</p>
+      <ul class="ee-caps">
+        <li class="ee-cap"><span class="ee-tile"><img src="assets/icon-calendar.svg" alt="" width="28" height="28"></span><span class="ee-cap__text"><span class="ee-cap__label">Appointments</span><span class="ee-cap__desc">View your schedule and get instant job alerts.</span></span></li>
+        <li class="ee-cap"><span class="ee-tile"><img src="assets/icon-navigate.svg" alt="" width="28" height="28"></span><span class="ee-cap__text"><span class="ee-cap__label">Navigation</span><span class="ee-cap__desc">Get one-tap directions to every job site.</span></span></li>
+        <li class="ee-cap"><span class="ee-tile"><img src="assets/icon-file-text-2.svg" alt="" width="28" height="28"></span><span class="ee-cap__text"><span class="ee-cap__label">Job updates</span><span class="ee-cap__desc">Update status and add photos or notes on site.</span></span></li>
+        <li class="ee-cap"><span class="ee-tile"><svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><rect x="3.5" y="6.5" width="21" height="15" rx="2.5"/><path d="M3.5 12h21M8 17h4"/></svg></span><span class="ee-cap__text"><span class="ee-cap__label">Payments</span><span class="ee-cap__desc">Collect payments and invoice on the spot.</span></span></li>
+      </ul>
+    </div>
+
+    <div class="ee-visual">
+      <div class="ee-fit">
+        <div class="ee-stage">
+          <!-- Primary technician phone -->
+          <section class="ee-phone ee-phone--main" aria-label="Technician home screen">
+            <div class="ee-screen">
+            <header class="ee-home__bar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Home</span>
+              <svg class="ee-home__r" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15zM10 21h4"/></svg></header>
+            <div class="ee-welcome">
+              <div>
+                <p class="ee-welcome__hi">Welcome Charles</p>
+                <p class="ee-welcome__time">10:20 <small>AM</small></p>
+                <span class="ee-checkin" aria-disabled="true">Check in</span>
+              </div>
+              <span class="ee-tech" role="img" aria-label="Illustration of a technician carrying a wrench"></span>
+            </div>
+            <h3 class="ee-today"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>Today’s appointments</h3>
+            <ul class="ee-appts">
+              <li><div class="ee-appt__top"><strong>AP-10</strong><span class="ee-pill">In progress</span></div><p class="ee-appt__s"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Started 12 hrs ago</p><div class="ee-appt__meta"><span>11:12AM, 12 Jul 23</span><span>1:00 Hrs</span></div></li>
+              <li><div class="ee-appt__top"><strong>AP-09</strong><span class="ee-pill">Partially Paid</span></div><p class="ee-appt__s"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>15 Hrs overdue</p><div class="ee-appt__meta"><span>8:00PM - 9:00PM, 12 Jul 23</span><span>1:00 Hrs</span></div></li>
+            </ul>
+            </div>
+            <p class="ee-status"><span class="ee-check" aria-hidden="true"></span>Checked in · 10:20 AM</p>
+          </section>
+        </div>
+      </div>
+      <div class="ee-badges">
+        <a href="#" class="ee-badge"><img src="assets/badge-app-store.png" alt="Download on the App Store" width="119" height="41"></a>
+        <a href="#" class="ee-badge"><img src="assets/badge-google-play.png" alt="Get it on Google Play" width="133" height="41"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Engaged Employees: workflow screens -->
+<section class="engaged-flow" aria-label="Technician workflow">
   <div class="ee-flow" data-ee-flow>
     <div class="ee-tabs" role="tablist" aria-label="Technician workflow"><button type="button" role="tab" class="ee-tab is-on" aria-selected="true" data-ee-tab="0"><span>1</span>Work order</button><button type="button" role="tab" class="ee-tab" aria-selected="false" data-ee-tab="1"><span>2</span>Invoice</button><button type="button" role="tab" class="ee-tab" aria-selected="false" data-ee-tab="2"><span>3</span>Payment</button><button type="button" role="tab" class="ee-tab" aria-selected="false" data-ee-tab="3"><span>4</span>Report</button></div>
     <div class="ee-flow__stage"><img class="ee-flow__img is-on" src="assets/ee-flow-work-order.webp" width="1792" height="878" loading="lazy" alt="Create work order: customer Zylker Inc, microwave repair, technician David Miller, with a live work order preview."><img class="ee-flow__img" src="assets/ee-flow-invoice.webp" width="1792" height="878" loading="lazy" alt="Create invoice from the completed work order: microwave repair and bulb, total $88.50, with a live invoice preview."><img class="ee-flow__img" src="assets/ee-flow-payment.webp" width="1792" height="878" loading="lazy" alt="Record payment of $88.50 by credit card against invoice INV-000008, with a payment receipt preview."><img class="ee-flow__img" src="assets/ee-flow-report.webp" width="1792" height="878" loading="lazy" alt="Create service report with completed checklist, customer rating and signature, with a service report preview."></div>
