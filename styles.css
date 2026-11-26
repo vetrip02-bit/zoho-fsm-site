@@ -1390,5 +1390,5 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .eo-stage{overflow:hidden;border-radius:18px}
 .eo-slide__img{display:block;width:100%;height:auto;border-radius:18px}
 
-.s2e{background:linear-gradient(to bottom,#fff 0,#fff 81.4%,#ecf5f3 81.4%,#ecf5f3 100%);display:flex;justify-content:center}
+.s2e{background:linear-gradient(to bottom,#fff 0,#fff 79.1%,#ecf5f3 79.1%,#ecf5f3 100%);display:flex;justify-content:center}
 .s2e img{display:block;width:100%;max-width:1100px;height:auto}
