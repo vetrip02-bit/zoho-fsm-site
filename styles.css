@@ -1373,4 +1373,5 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 
 /* ---- Customer stories: now a single designed image ---- */
 .stories-img{padding:0;background:#fbf7f4}
-.stories-img img{display:block;width:100%;max-width:1440px;height:auto;margin:0 auto}
+.stories-img{padding:0 24px}
+.stories-img img{display:block;width:100%;max-width:1080px;height:auto;margin:0 auto}
