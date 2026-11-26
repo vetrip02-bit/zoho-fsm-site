@@ -103,3 +103,16 @@ document.querySelectorAll('[data-carousel]').forEach(function (root) {
   window.addEventListener('resize', update);
   update();
 })();
+
+// Engaged Employees workflow gallery: tabs switch between the four step screens.
+(function () {
+  var root = document.querySelector('[data-ee-flow]'); if (!root) return;
+  var tabs = root.querySelectorAll('.ee-tab'), imgs = root.querySelectorAll('.ee-flow__img');
+  function go(i) {
+    tabs.forEach(function (t, k) { t.classList.toggle('is-on', k === i); t.setAttribute('aria-selected', k === i ? 'true' : 'false'); });
+    imgs.forEach(function (m, k) { m.classList.toggle('is-on', k === i); });
+  }
+  tabs.forEach(function (t, i) { t.addEventListener('click', function () { go(i); }); });
+  var n = 0; var timer = setInterval(function () { n = (n + 1) % tabs.length; go(n); }, 5000);
+  root.addEventListener('click', function () { clearInterval(timer); });
+})();

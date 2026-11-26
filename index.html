@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261126b">
+<link rel="stylesheet" href="styles.css?v=20261126c">
 </head>
 <body>
 <div class="page">
@@ -343,6 +343,10 @@
 <!-- Engaged Employees -->
 <section class="engaged engaged--image" aria-label="Engaged Employees">
   <img class="ee-image" src="assets/engaged-employees.webp" width="2000" height="957" loading="lazy" alt="Engaged Employees: everything technicians need, wherever the job takes them. Appointments, navigation, job updates and payments in the mobile app, available on the App Store and Google Play.">
+  <div class="ee-flow" data-ee-flow>
+    <div class="ee-tabs" role="tablist" aria-label="Technician workflow"><button type="button" role="tab" class="ee-tab is-on" aria-selected="true" data-ee-tab="0"><span>1</span>Work order</button><button type="button" role="tab" class="ee-tab" aria-selected="false" data-ee-tab="1"><span>2</span>Invoice</button><button type="button" role="tab" class="ee-tab" aria-selected="false" data-ee-tab="2"><span>3</span>Payment</button><button type="button" role="tab" class="ee-tab" aria-selected="false" data-ee-tab="3"><span>4</span>Report</button></div>
+    <div class="ee-flow__stage"><img class="ee-flow__img is-on" src="assets/ee-flow-work-order.webp" width="1792" height="878" loading="lazy" alt="Create work order: customer Zylker Inc, microwave repair, technician David Miller, with a live work order preview."><img class="ee-flow__img" src="assets/ee-flow-invoice.webp" width="1792" height="878" loading="lazy" alt="Create invoice from the completed work order: microwave repair and bulb, total $88.50, with a live invoice preview."><img class="ee-flow__img" src="assets/ee-flow-payment.webp" width="1792" height="878" loading="lazy" alt="Record payment of $88.50 by credit card against invoice INV-000008, with a payment receipt preview."><img class="ee-flow__img" src="assets/ee-flow-report.webp" width="1792" height="878" loading="lazy" alt="Create service report with completed checklist, customer rating and signature, with a service report preview."></div>
+  </div>
 </section>
 
 <!-- Delighted Customers -->
@@ -590,7 +594,7 @@
 </a>
 
 </div>
-<script src="script.js?v=20261125b"></script>
+<script src="script.js?v=20261126c"></script>
 <script src="efficient-operations.js"></script>
 </body>
 </html>
