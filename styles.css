@@ -1408,3 +1408,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 /* ---- Efficient Operations: capability row (4 items) removed; carousel arrows/dots stay ---- */
 .eo-caps{display:none!important}
 .eo-foot{gap:0;margin-top:20px}
+
+/* ---- Efficient Operations: carousel slides are now full images ---- */
+.eo-frame{background:none;border-radius:0;padding:0;box-shadow:none;overflow:visible}
+.eo-bar,.eo-photo,.eo-flow{display:none}
+.eo-body{display:block;background:none;border-radius:0;overflow:visible}
+.eo-stage{overflow:hidden;border-radius:18px}
+.eo-slide__img{display:block;width:100%;height:auto;border-radius:18px}
