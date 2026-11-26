@@ -1384,3 +1384,12 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .engaged .ee-card{max-width:none;border-radius:0;box-shadow:none;padding-inline:max(64px,calc((100% - 1312px)/2))}
 @media (max-width:1024px){.engaged{padding-left:0;padding-right:0}.engaged .ee-card{padding-inline:40px}}
 @media (max-width:720px){.engaged .ee-card{padding-inline:24px}}
+
+/* ---- Engaged Employees: capabilities in a 2 x 2 grid ---- */
+.engaged .ee-caps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 28px}
+.engaged .ee-cap{grid-template-columns:48px 1fr;column-gap:14px;align-items:flex-start}
+.engaged .ee-tile{width:48px;height:48px}
+.engaged .ee-cap__label{font-size:24px}
+.engaged .ee-cap__desc{white-space:normal;font-size:16px;line-height:1.4}
+@media (min-width:1025px){.engaged .ee-card{grid-template-columns:minmax(0,50%) minmax(0,1fr)}}
+@media (max-width:520px){.engaged .ee-caps{grid-template-columns:1fr}}
