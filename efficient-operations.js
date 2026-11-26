@@ -139,7 +139,7 @@
   var ALTS = ['Create work order: Zylker Inc, microwave repair, technician David Miller, with a live work order preview.','Create invoice auto-filled from the work order: microwave repair and bulb, total $88.50, with a live invoice preview.','Record payment of $88.50 by credit card against invoice INV-000008, with a payment receipt preview.','Create service report with completed checklist, customer rating and signature, with a service report preview.'];
   stage.innerHTML = SLIDES.map(function (s, i) {
     return '<div class="eo-slide" id="eo-slide-' + s.id + '" role="group" aria-roledescription="slide" aria-label="' + (i + 1) + ' of ' + len + ': ' + s.label + '">' +
-      '<img class="eo-slide__img" src="assets/eo-slide-' + (i + 1) + '.webp?v=1" width="1792" height="878" loading="' + (i === 0 ? 'eager' : 'lazy') + '" alt="' + ALTS[i] + '"></div>';
+      '<img class="eo-slide__img" src="assets/eo-slide-' + (i + 1) + '.webp?v=2" width="1792" height="878" loading="' + (i === 0 ? 'eager' : 'lazy') + '" alt="' + ALTS[i] + '"></div>';
   }).join('');
   var panels = Array.prototype.slice.call(stage.children);
 
