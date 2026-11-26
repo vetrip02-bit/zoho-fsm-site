@@ -1404,3 +1404,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 /* ---- Footer language selector: dropdown arrow ---- */
 .search-lang .lang{position:relative;padding-right:34px;font-family:inherit;color:inherit;cursor:pointer;text-align:left}
 .search-lang .lang::after{content:"";position:absolute;right:12px;top:50%;margin-top:-3px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #222}
+
+/* ---- Efficient Operations: capability row (4 items) removed; carousel arrows/dots stay ---- */
+.eo-caps{display:none!important}
+.eo-foot{gap:0;margin-top:20px}
