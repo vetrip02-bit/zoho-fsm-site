@@ -166,14 +166,14 @@
   }
   // Shared shell: photo + toast, step bar, form card, receipt panel, "next" toast.
   function shell(c) {
-    return '<div class="eo-pay' + (c.cls ? ' ' + c.cls : '') + '" role="img" aria-label="' + c.alt + '">' +
+    return '<div class="eo-pay' + (c.cls ? ' ' + c.cls : '') + '" role="img" aria-label="' + c.alt + '"><div class="eo-pay__in">' +
       '<div class="eo-pay__photo"><img src="assets/eo-pay-photo.webp" width="418" height="753" alt="" loading="lazy">' +
         '<div class="eo-pay__toast"><span class="eo-pay__tick">' + CHECK + '</span><span><b>' + c.toast[0] + '</b><span>' + c.toast[1] + '</span></span></div></div>' +
       steps(c.step) +
       '<div class="eo-pay__form"><h3>' + c.title + '</h3><span class="eo-pay__chip">' + CHECK + c.chip + '</span>' + c.form + '</div>' +
       '<div class="eo-pay__rcpt"><p>' + c.sideLabel + '</p>' + c.side + '</div>' +
       '<div class="eo-pay__next" style="left:calc(' + c.next[0] + '*var(--u));top:calc(' + c.next[1] + '*var(--u));width:calc(' + c.next[2] + '*var(--u));height:calc(' + c.next[3] + '*var(--u))"><span class="eo-pay__mail">' + c.next[4] + '</span><span><b>' + c.next[5] + '</b><span>' + c.next[6] + '</span></span></div>' +
-    '</div>';
+    '</div></div>';
   }
   function tick(small) { return '<span class="eo-pay__tick2">' + CHECK + '</span>'; }
 
@@ -366,4 +366,20 @@
     sx = sy = null;
     if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
   }, { passive: true });
+})();
+
+// Keep the slide / section artwork scaled to its container (CSS cqw is the fallback).
+(function () {
+  if (!window.ResizeObserver) return;
+  function track(sel, inner, base) {
+    var ro = new ResizeObserver(function (entries) {
+      entries.forEach(function (e) {
+        var el = e.target.querySelector(inner);
+        if (el && e.contentRect.width) el.style.setProperty('--u', (e.contentRect.width / base) + 'px');
+      });
+    });
+    document.querySelectorAll(sel).forEach(function (n) { ro.observe(n); });
+  }
+  track('.eo-pay', '.eo-pay__in', 1792);
+  track('.s2e__art', '.s2e__in', 1672);
 })();
