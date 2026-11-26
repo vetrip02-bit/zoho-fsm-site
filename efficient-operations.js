@@ -368,17 +368,29 @@
   }, { passive: true });
 })();
 
-// Keep the slide / section artwork scaled to its container (CSS cqw is the fallback).
+// Keep the slide / section artwork scaled to its container. The page applies a body zoom, so the
+// width is measured against a 1000px probe in the same coordinate space (zoom cancels out).
 (function () {
-  if (!window.ResizeObserver) return;
-  function track(sel, inner, base) {
-    var ro = new ResizeObserver(function (entries) {
-      entries.forEach(function (e) {
-        var el = e.target.querySelector(inner);
-        if (el && e.contentRect.width) el.style.setProperty('--u', (e.contentRect.width / base) + 'px');
-      });
-    });
-    document.querySelectorAll(sel).forEach(function (n) { ro.observe(n); });
+  function fit(art, inner, base) {
+    var probe = inner.__probe;
+    if (!probe) {
+      probe = document.createElement('i');
+      probe.setAttribute('aria-hidden', 'true');
+      probe.style.cssText = 'position:absolute;left:0;top:0;width:1000px;height:0;visibility:hidden;pointer-events:none';
+      inner.appendChild(probe);
+      inner.__probe = probe;
+    }
+    var z = probe.getBoundingClientRect().width / 1000 || 1;
+    var w = art.getBoundingClientRect().width / z;
+    if (w) inner.style.setProperty('--u', (w / base) + 'px');
+  }
+  function track(sel, innerSel, base) {
+    var nodes = Array.prototype.slice.call(document.querySelectorAll(sel));
+    function run() { nodes.forEach(function (n) { var inner = n.querySelector(innerSel); if (inner) fit(n, inner, base); }); }
+    run();
+    window.addEventListener('resize', run);
+    window.addEventListener('load', run);
+    if (window.ResizeObserver) { var ro = new ResizeObserver(run); nodes.forEach(function (n) { ro.observe(n); }); }
   }
   track('.eo-pay', '.eo-pay__in', 1792);
   track('.s2e__art', '.s2e__in', 1672);
