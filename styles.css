@@ -1349,3 +1349,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 
 /* ---- Engaged Employees: map background from the new design (sizes unchanged) ---- */
 .engaged .ee-card{background:url(assets/engaged-bg.svg) center/cover no-repeat,#fbf8f3}
+
+/* ---- Engaged Employees: new map background image ---- */
+.engaged .ee-card{background:url(assets/engaged-bg.webp) right center/cover no-repeat,#faf6f2}
