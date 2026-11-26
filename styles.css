@@ -1562,3 +1562,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .eo-pay__f--tall div{height:calc(62*var(--u))}
 .eo-pay__f--sm div{height:calc(40*var(--u))}
 .eo-pay__f--sum div{height:calc(58*var(--u))}
+/* toasts and buttons size to their text so nothing spills out of the box */
+.eo-pay__next{width:max-content!important;max-width:calc(560*var(--u));padding-right:calc(34*var(--u))}
+.eo-pay__btn{width:auto!important;padding:0 calc(30*var(--u));white-space:nowrap}
+.eo-pay__btn--p{min-width:calc(260*var(--u))}
+.eo-pay__btn--s{min-width:calc(135*var(--u))}
