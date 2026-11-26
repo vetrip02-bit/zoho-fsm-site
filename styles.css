@@ -1378,6 +1378,3 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 
 /* Engaged Employees: workflow gallery is its own band under the original section */
 .engaged-flow{padding:0 0 72px}
-
-/* ---- Engaged Employees: seamless background (no map lines / pin, no gap between sides) ---- */
-.engaged .ee-card{background:linear-gradient(90deg,#faf6f2 0%,#f6f5ee 38%,#e9f4e4 68%,#dcf0d7 100%)}
