@@ -1393,3 +1393,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .engaged .ee-cap__desc{white-space:normal;font-size:16px;line-height:1.4}
 @media (min-width:1025px){.engaged .ee-card{grid-template-columns:minmax(0,50%) minmax(0,1fr)}}
 @media (max-width:520px){.engaged .ee-caps{grid-template-columns:1fr}}
+
+/* ---- Engaged Employees: 2 x 2 grid fills the column height with even spacing (desktop) ---- */
+@media (min-width:1025px){
+  .engaged .ee-caps{flex:1;grid-template-rows:repeat(2,1fr);align-content:stretch;align-items:center;margin-top:8px;margin-bottom:16px;gap:0 28px}
+  .engaged .ee-sub{padding-bottom:24px}
+}
+@media (min-width:1025px){.engaged .ee-copy{align-self:stretch}}
