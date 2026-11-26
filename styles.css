@@ -1378,3 +1378,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 
 /* Engaged Employees: workflow gallery is its own band under the original section */
 .engaged-flow{padding:0 0 72px}
+
+/* ---- Engaged Employees: card background runs edge to edge (no white side gutters) ---- */
+.engaged{padding-left:0;padding-right:0}
+.engaged .ee-card{max-width:none;border-radius:0;box-shadow:none;padding-inline:max(64px,calc((100% - 1312px)/2))}
+@media (max-width:1024px){.engaged{padding-left:0;padding-right:0}.engaged .ee-card{padding-inline:40px}}
+@media (max-width:720px){.engaged .ee-card{padding-inline:24px}}
