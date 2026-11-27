@@ -1567,3 +1567,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .eo-pay__btn{width:auto!important;padding:0 calc(30*var(--u));white-space:nowrap}
 .eo-pay__btn--p{min-width:calc(260*var(--u))}
 .eo-pay__btn--s{min-width:calc(135*var(--u))}
+
+/* Hero: more breathing room between the CTA and the dispatch console */
+.hero__preview{margin-top:72px}
+@media (max-width:1024px){.hero__preview{margin-top:56px}}
+@media (max-width:720px){.hero__preview{margin-top:44px}}
