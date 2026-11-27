@@ -1575,3 +1575,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 
 /* Engaged Employees: background extended slightly at the top and bottom */
 .ee-card{padding-block:72px;min-height:808px}
+
+/* Engaged Employees: centre the phone + store badges vertically within the background */
+.ee-visual{align-self:center}
