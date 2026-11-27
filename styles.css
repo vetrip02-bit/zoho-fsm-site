@@ -1128,8 +1128,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .pc-h{position:relative;z-index:1;margin:6px 0 0;font-size:16px;line-height:1.3;font-weight:700;color:#111}
 .pc-cta{position:relative;z-index:1;margin-top:auto;height:34px;padding:0 16px;display:inline-flex;align-items:center;gap:9px;background:var(--btn);color:#fff;border-radius:4px;font-weight:600;font-size:12px;letter-spacing:.4px}
 .pc-deco{position:absolute;pointer-events:none}
-.pc-truck{right:24px;bottom:30px;width:64px;height:auto;opacity:.3}
-.pc-crm{right:24px;bottom:30px;width:52px;height:52px;opacity:.45}.pcard:hover .pc-cta{filter:brightness(.92)}
+.pc-truck{right:24px;bottom:18px;width:64px;height:auto;opacity:.3}
+.pc-crm{right:24px;bottom:18px;width:52px;height:52px;opacity:.45}.pcard:hover .pc-cta{filter:brightness(.92)}
 
 /* centered section headings */
 .int-head,.int-head .h-xl,.int-head p{text-align:center;margin-left:auto;margin-right:auto}
