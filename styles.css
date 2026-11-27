@@ -1562,3 +1562,16 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand-green);outlin
 .hero__preview{margin-top:72px}
 @media (max-width:1024px){.hero__preview{margin-top:56px}}
 @media (max-width:720px){.hero__preview{margin-top:44px}}
+
+/* Efficient Operations toast: white tick tile with a green tick */
+.eo-pay__tick{background:#fff;color:#0f7a32}
+
+/* Efficient Operations stepper: steps spread across the bar with longer connector lines */
+.eo-pay__steps{padding:0 calc(48*var(--u))}
+.eo-pay__steps hr{flex:1 1 0;width:auto;min-width:calc(72*var(--u))}
+
+/* a little more room between the pricing band and the benefits row */
+.final{padding-top:80px}
+
+/* Engaged Employees: background extended slightly at the top and bottom */
+.ee-card{padding-block:72px;min-height:808px}
